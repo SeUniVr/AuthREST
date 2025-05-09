@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v3Subregion-20230205204029032",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/subregion/Eastern%20Africa?fields\u003d50",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:40:29 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:40:29 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\ncontent-type: application/json\nKeep-Alive: timeout\u003d5, max\u003d57\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"altSpellings\":[\"IO\"]},{\"altSpellings\":[\"YT\",\"Department of Mayotte\",\"Département de Mayotte\"]},{\"altSpellings\":[\"KM\",\"Union of the Comoros\",\"Union des Comores\",\"Udzima wa Komori\",\"al-Itti??d al-Qumur?\"]},{\"altSpellings\":[\"ET\",\"??ty???y?\",\"Federal Democratic Republic of Ethiopia\",\"?????? ????? ??????? ?????\"]},{\"altSpellings\":[\"MW\",\"Republic of Malawi\"]},{\"altSpellings\":[\"KE\",\"Republic of Kenya\",\"Jamhuri ya Kenya\"]},{\"altSpellings\":[\"BI\",\"Republic of Burundi\",\"Republika y\u0027Uburundi\",\"République du Burundi\"]},{\"altSpellings\":[\"SO\",\"a?-??m?l\",\"Federal Republic of Somalia\",\"Jamhuuriyadda Federaalka Soomaaliya\",\"Jumh?riyyat a?-??m?l al-Fider?liyya\"]},{\"altSpellings\":[\"MG\",\"Republic of Madagascar\",\"Repoblikan\u0027i Madagasikara\",\"République de Madagascar\"]},{\"altSpellings\":[\"RE\",\"Reunion\"]},{\"altSpellings\":[\"MZ\",\"Republic of Mozambique\",\"República de Moçambique\"]},{\"altSpellings\":[\"SC\",\"Republic of Seychelles\",\"Repiblik Sesel\",\"République des Seychelles\"]},{\"altSpellings\":[\"TZ\",\"Tanzania, United Republic of\",\"United Republic of Tanzania\",\"Jamhuri ya Muungano wa Tanzania\"]},{\"altSpellings\":[\"DJ\",\"Jabuuti\",\"Gabuuti\",\"Republic of Djibouti\",\"République de Djibouti\",\"Gabuutih Ummuuno\",\"Jamhuuriyadda Jabuuti\"]},{\"altSpellings\":[\"MU\",\"Republic of Mauritius\",\"République de Maurice\"]},{\"altSpellings\":[\"RW\",\"Republic of Rwanda\",\"Repubulika y\u0027u Rwanda\",\"République du Rwanda\"]},{\"altSpellings\":[\"ZM\",\"Republic of Zambia\"]},{\"altSpellings\":[\"UG\",\"Republic of Uganda\",\"Jamhuri ya Uganda\"]},{\"altSpellings\":[\"ER\",\"State of Eritrea\",\"??? ????\",\"Dawlat Iritriyá\",\"?Ertr?\",\"Iritriy?\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:40:29 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:40:29 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "FAIL",
+      "message": "The erroneous test sequence was accepted as valid by the server."
+    }
+  },
+  "tags": []
+}

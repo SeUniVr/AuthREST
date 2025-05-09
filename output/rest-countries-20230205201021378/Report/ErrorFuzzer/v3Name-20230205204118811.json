@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v3Name-20230205204118811",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/name/%7Bname%7D?fullText\u003dfalse",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:41:18 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 404
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:41:19 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 36\nConnection: close\n",
+      "responseBody": "{\"status\":404,\"message\":\"Not Found\"}",
+      "responseReceivedAt": "Feb 5, 2023, 8:41:18 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:41:18 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "PASS",
+      "message": "The erroneous test sequence was rejected by the server."
+    }
+  },
+  "tags": []
+}

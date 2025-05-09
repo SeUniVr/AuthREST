@@ -1,0 +1,4 @@
+name: Book Store
+specificationFileName: bookstore-tagged.json
+authenticationCommands:
+  default: "python apis/bookstore/scripts/auth.py"

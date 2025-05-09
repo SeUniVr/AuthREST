@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Capital-20230205201958060",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/capital/Budapest",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:59 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:59 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d93\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Hungary\",\"official\":\"Hungary\",\"nativeName\":{\"hun\":{\"official\":\"Magyarország\",\"common\":\"Magyarország\"}}},\"tld\":[\".hu\"],\"cca2\":\"HU\",\"ccn3\":\"348\",\"cca3\":\"HUN\",\"cioc\":\"HUN\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"HUF\":{\"name\":\"Hungarian forint\",\"symbol\":\"Ft\"}},\"idd\":{\"root\":\"+3\",\"suffixes\":[\"6\"]},\"capital\":[\"Budapest\"],\"altSpellings\":[\"HU\"],\"region\":\"Europe\",\"subregion\":\"Central Europe\",\"languages\":{\"hun\":\"Hungarian\"},\"translations\":{\"ara\":{\"official\":\"????????? ???????\",\"common\":\"?????\"},\"bre\":{\"official\":\"Hungaria\",\"common\":\"Hungaria\"},\"ces\":{\"official\":\"Ma?arsko\",\"common\":\"Ma?arsko\"},\"cym\":{\"official\":\"Hungary\",\"common\":\"Hungary\"},\"deu\":{\"official\":\"Ungarn\",\"common\":\"Ungarn\"},\"est\":{\"official\":\"Ungari\",\"common\":\"Ungari\"},\"fin\":{\"official\":\"Unkari\",\"common\":\"Unkari\"},\"fra\":{\"official\":\"Hongrie\",\"common\":\"Hongrie\"},\"hrv\":{\"official\":\"Madžarska\",\"common\":\"Ma?arska\"},\"hun\":{\"official\":\"Magyarország\",\"common\":\"Magyarország\"},\"ita\":{\"official\":\"Ungheria\",\"common\":\"Ungheria\"},\"jpn\":{\"official\":\"?????\",\"common\":\"?????\"},\"kor\":{\"official\":\"???\",\"common\":\"???\"},\"nld\":{\"official\":\"Hongarije\",\"common\":\"Hongarije\"},\"per\":{\"official\":\"????????\",\"common\":\"????????\"},\"pol\":{\"official\":\"W?gry\",\"common\":\"W?gry\"},\"por\":{\"official\":\"Hungria\",\"common\":\"Hungria\"},\"rus\":{\"official\":\"???????\",\"common\":\"???????\"},\"slk\":{\"official\":\"Ma?arsko\",\"common\":\"Ma?arsko\"},\"spa\":{\"official\":\"Hungría\",\"common\":\"Hungría\"},\"swe\":{\"official\":\"Ungern\",\"common\":\"Ungern\"},\"urd\":{\"official\":\"????????\",\"common\":\"????????\"},\"zho\":{\"official\":\"???\",\"common\":\"???\"}},\"latlng\":[47.0,20.0],\"landlocked\":true,\"borders\":[\"AUT\",\"HRV\",\"ROU\",\"SRB\",\"SVK\",\"SVN\",\"UKR\"],\"area\":93028.0,\"demonyms\":{\"eng\":{\"f\":\"Hungarian\",\"m\":\"Hungarian\"},\"fra\":{\"f\":\"Hongroise\",\"m\":\"Hongrois\"}},\"flag\":\"\\uD83C\\uDDED\\uD83C\\uDDFA\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/9gfPupm5bffixiFJ6\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/21335\"},\"population\":9749763,\"gini\":{\"2018\":29.6},\"fifa\":\"HUN\",\"car\":{\"signs\":[\"H\"],\"side\":\"right\"},\"timezones\":[\"UTC+01:00\"],\"continents\":[\"Europe\"],\"flags\":[\"https://flagcdn.com/hu.svg\",\"https://flagcdn.com/w320/hu.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:59 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:58 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

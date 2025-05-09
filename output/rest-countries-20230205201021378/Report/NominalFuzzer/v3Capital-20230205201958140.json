@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Capital-20230205201958140",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/capital/Tripoli",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:20:03 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:20:03 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d98\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Libya\",\"official\":\"State of Libya\",\"nativeName\":{\"ara\":{\"official\":\"?????? ?????\",\"common\":\"??????\"}}},\"tld\":[\".ly\"],\"cca2\":\"LY\",\"ccn3\":\"434\",\"cca3\":\"LBY\",\"cioc\":\"LBA\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"LYD\":{\"name\":\"Libyan dinar\",\"symbol\":\"?.?\"}},\"idd\":{\"root\":\"+2\",\"suffixes\":[\"18\"]},\"capital\":[\"Tripoli\"],\"altSpellings\":[\"LY\",\"State of Libya\",\"Dawlat Libya\"],\"region\":\"Africa\",\"subregion\":\"Northern Africa\",\"languages\":{\"ara\":\"Arabic\"},\"translations\":{\"ara\":{\"official\":\"???? ?????\",\"common\":\"??????\"},\"bre\":{\"official\":\"Stad Libia\",\"common\":\"Libia\"},\"ces\":{\"official\":\"Stát Libye\",\"common\":\"Libye\"},\"cym\":{\"official\":\"State of Libya\",\"common\":\"Libya\"},\"deu\":{\"official\":\"Staat Libyen\",\"common\":\"Libyen\"},\"est\":{\"official\":\"Liibüa\",\"common\":\"Liibüa\"},\"fin\":{\"official\":\"Libyan valtio\",\"common\":\"Libya\"},\"fra\":{\"official\":\"Grande République arabe libyenne populaire et socialiste\",\"common\":\"Libye\"},\"hrv\":{\"official\":\"Država Libiji\",\"common\":\"Libija\"},\"hun\":{\"official\":\"Líbia Állam\",\"common\":\"Líbia\"},\"ita\":{\"official\":\"Stato della Libia\",\"common\":\"Libia\"},\"jpn\":{\"official\":\"??????\",\"common\":\"???\"},\"kor\":{\"official\":\"???\",\"common\":\"???\"},\"nld\":{\"official\":\"Staat van Libië\",\"common\":\"Libië\"},\"per\":{\"official\":\"???? ????\",\"common\":\"????\"},\"pol\":{\"official\":\"Pa?stwo Libia\",\"common\":\"Libia\"},\"por\":{\"official\":\"Estado da Líbia\",\"common\":\"Líbia\"},\"rus\":{\"official\":\"??????????? ?????\",\"common\":\"?????\"},\"slk\":{\"official\":\"Líbya\",\"common\":\"Líbya\"},\"spa\":{\"official\":\"Estado de Libia\",\"common\":\"Libia\"},\"swe\":{\"official\":\"Staten Libyen\",\"common\":\"Libyen\"},\"urd\":{\"official\":\"?????? ?????\",\"common\":\"?????\"},\"zho\":{\"official\":\"????\",\"common\":\"???\"}},\"latlng\":[25.0,17.0],\"landlocked\":false,\"borders\":[\"DZA\",\"TCD\",\"EGY\",\"NER\",\"SDN\",\"TUN\"],\"area\":1759540.0,\"demonyms\":{\"eng\":{\"f\":\"Libyan\",\"m\":\"Libyan\"},\"fra\":{\"f\":\"Libyenne\",\"m\":\"Libyen\"}},\"flag\":\"\\uD83C\\uDDF1\\uD83C\\uDDFE\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/eLgGnaQWcJEdYRMy5\",\"openStreetMaps\":\"openstreetmap.org/relation/192758\"},\"population\":6871287,\"fifa\":\"LBY\",\"car\":{\"signs\":[\"LAR\"],\"side\":\"right\"},\"timezones\":[\"UTC+01:00\"],\"continents\":[\"Africa\"],\"flags\":[\"https://flagcdn.com/ly.svg\",\"https://flagcdn.com/w320/ly.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:20:03 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:58 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

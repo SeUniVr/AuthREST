@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Demonym-20230205201946249",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/demonym/Bruneian",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:47 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:47 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d96\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Brunei\",\"official\":\"Nation of Brunei, Abode of Peace\",\"nativeName\":{\"msa\":{\"official\":\"Nation of Brunei, Abode Damai\",\"common\":\"Negara Brunei Darussalam\"}}},\"tld\":[\".bn\"],\"cca2\":\"BN\",\"ccn3\":\"096\",\"cca3\":\"BRN\",\"cioc\":\"BRU\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"BND\":{\"name\":\"Brunei dollar\",\"symbol\":\"$\"},\"SGD\":{\"name\":\"Singapore dollar\",\"symbol\":\"$\"}},\"idd\":{\"root\":\"+6\",\"suffixes\":[\"73\"]},\"capital\":[\"Bandar Seri Begawan\"],\"altSpellings\":[\"BN\",\"Brunei Darussalam\",\"Nation of Brunei\",\"the Abode of Peace\"],\"region\":\"Asia\",\"subregion\":\"South-Eastern Asia\",\"languages\":{\"msa\":\"Malay\"},\"translations\":{\"ara\":{\"official\":\"?????? ??? ??????\",\"common\":\"??????\"},\"bre\":{\"official\":\"Stad Brunei Darussalam\",\"common\":\"Brunei\"},\"ces\":{\"official\":\"Sultanát Brunej\",\"common\":\"Brunej\"},\"cym\":{\"official\":\"Teyrnas Brwnei\",\"common\":\"Brunei\"},\"deu\":{\"official\":\"Sultanat Brunei Darussalam\",\"common\":\"Brunei\"},\"est\":{\"official\":\"Brunei Darussalami Riik\",\"common\":\"Brunei\"},\"fin\":{\"official\":\"Brunei Darussalamin valtio\",\"common\":\"Brunei\"},\"fra\":{\"official\":\"État de Brunei Darussalam\",\"common\":\"Brunei\"},\"hrv\":{\"official\":\"Nacija od Bruneja, Ku?u Mira\",\"common\":\"Brunej\"},\"hun\":{\"official\":\"Brunei Szultanátus\",\"common\":\"Brunei\"},\"ita\":{\"official\":\"Nazione di Brunei, Dimora della Pace\",\"common\":\"Brunei\"},\"jpn\":{\"official\":\"?????????????\",\"common\":\"???????????\"},\"kor\":{\"official\":\"???? ?????\",\"common\":\"????\"},\"nld\":{\"official\":\"Natie van Brunei, de verblijfplaats van de Vrede\",\"common\":\"Brunei\"},\"per\":{\"official\":\"?????? ???? ???\",\"common\":\"??????\"},\"pol\":{\"official\":\"Pa?stwo Brunei Darussalam\",\"common\":\"Brunei\"},\"por\":{\"official\":\"Nação do Brunei, Morada da Paz\",\"common\":\"Brunei\"},\"rus\":{\"official\":\"????? ??????, ??????? ????\",\"common\":\"??????\"},\"slk\":{\"official\":\"Brunejský sultanât\",\"common\":\"Brunej\"},\"spa\":{\"official\":\"Nación de Brunei, Morada de la Paz\",\"common\":\"Brunei\"},\"swe\":{\"official\":\"Brunei Darussalam\",\"common\":\"Brunei\"},\"urd\":{\"official\":\"?????? ??????? ?????????\",\"common\":\"???????\"},\"zho\":{\"official\":\"??????\",\"common\":\"??\"}},\"latlng\":[4.5,114.66666666],\"landlocked\":false,\"borders\":[\"MYS\"],\"area\":5765.0,\"demonyms\":{\"eng\":{\"f\":\"Bruneian\",\"m\":\"Bruneian\"},\"fra\":{\"f\":\"Brunéienne\",\"m\":\"Brunéien\"}},\"flag\":\"\\uD83C\\uDDE7\\uD83C\\uDDF3\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/4jb4CqBXhr8vNh579\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/2103120\"},\"population\":437483,\"fifa\":\"BRU\",\"car\":{\"signs\":[\"BRU\"],\"side\":\"left\"},\"timezones\":[\"UTC+08:00\"],\"continents\":[\"Asia\"],\"flags\":[\"https://flagcdn.com/bn.svg\",\"https://flagcdn.com/w320/bn.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:47 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:46 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

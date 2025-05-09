@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Capital-20230205201958098",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/capital/Papeet%C4%93",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:20:01 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:20:01 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d85\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"French Polynesia\",\"official\":\"French Polynesia\",\"nativeName\":{\"fra\":{\"official\":\"Polynésie française\",\"common\":\"Polynésie française\"}}},\"tld\":[\".pf\"],\"cca2\":\"PF\",\"ccn3\":\"258\",\"cca3\":\"PYF\",\"independent\":false,\"status\":\"officially-assigned\",\"unMember\":false,\"currencies\":{\"XPF\":{\"name\":\"CFP franc\",\"symbol\":\"?\"}},\"idd\":{\"root\":\"+6\",\"suffixes\":[\"89\"]},\"capital\":[\"Papeet?\"],\"altSpellings\":[\"PF\",\"Polynésie française\",\"French Polynesia\",\"P?r?netia Far?ni\"],\"region\":\"Oceania\",\"subregion\":\"Polynesia\",\"languages\":{\"fra\":\"French\"},\"translations\":{\"ara\":{\"official\":\"???????? ????????\",\"common\":\"???????? ????????\"},\"bre\":{\"official\":\"Polinezia C\u0027hall\",\"common\":\"Polinezia C\u0027hall\"},\"ces\":{\"official\":\"Francouzská Polynésie\",\"common\":\"Francouzská Polynésie\"},\"cym\":{\"official\":\"French Polynesia\",\"common\":\"French Polynesia\"},\"deu\":{\"official\":\"Französisch-Polynesien\",\"common\":\"Französisch-Polynesien\"},\"est\":{\"official\":\"Prantsuse Polüneesia\",\"common\":\"Prantsuse Polüneesia\"},\"fin\":{\"official\":\"Ranskan Polynesia\",\"common\":\"Ranskan Polynesia\"},\"fra\":{\"official\":\"Polynésie française\",\"common\":\"Polynésie française\"},\"hrv\":{\"official\":\"Francuska Polinezija\",\"common\":\"Francuska Polinezija\"},\"hun\":{\"official\":\"Francia Polinézia\",\"common\":\"Francia Polinézia\"},\"ita\":{\"official\":\"Polinesia Francese\",\"common\":\"Polinesia Francese\"},\"jpn\":{\"official\":\"??????????\",\"common\":\"??????????\"},\"kor\":{\"official\":\"???? ?????\",\"common\":\"???? ?????\"},\"nld\":{\"official\":\"Frans-Polynesië\",\"common\":\"Frans-Polynesië\"},\"per\":{\"official\":\"????????? ??????\",\"common\":\"????????? ??????\"},\"pol\":{\"official\":\"Polinezja Francuska\",\"common\":\"Polinezja Francuska\"},\"por\":{\"official\":\"Polinésia Francesa\",\"common\":\"Polinésia Francesa\"},\"rus\":{\"official\":\"??????????? ?????????\",\"common\":\"??????????? ?????????\"},\"slk\":{\"official\":\"Francúzska Polynézia\",\"common\":\"Francúzska Polynézia\"},\"spa\":{\"official\":\"Polinesia francés\",\"common\":\"Polinesia Francesa\"},\"swe\":{\"official\":\"Franska Polynesien\",\"common\":\"Franska Polynesien\"},\"urd\":{\"official\":\"???????? ?????????\",\"common\":\"???????? ?????????\"},\"zho\":{\"official\":\"???????\",\"common\":\"???????\"}},\"latlng\":[-15.0,-140.0],\"landlocked\":false,\"area\":4167.0,\"demonyms\":{\"eng\":{\"f\":\"French Polynesian\",\"m\":\"French Polynesian\"},\"fra\":{\"f\":\"Polynésienne\",\"m\":\"Polynésien\"}},\"flag\":\"\\uD83C\\uDDF5\\uD83C\\uDDEB\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/xgg6BQTRyeQg4e1m6\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/3412620\"},\"population\":280904,\"car\":{\"signs\":[\"F\"],\"side\":\"right\"},\"timezones\":[\"UTC-10:00\",\"UTC-09:30\",\"UTC-09:00\"],\"continents\":[\"Oceania\"],\"flags\":[\"https://flagcdn.com/pf.svg\",\"https://flagcdn.com/w320/pf.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:20:01 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:58 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

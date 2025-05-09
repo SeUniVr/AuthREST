@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Alphacodes-20230205202851506",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/alpha?codes\u003dBTN",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:28:56 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:28:56 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d98\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":\"Bhutan\",\"topLevelDomain\":[\".bt\"],\"alpha2Code\":\"BT\",\"alpha3Code\":\"BTN\",\"callingCodes\":[\"975\"],\"capital\":\"Thimphu\",\"altSpellings\":[\"BT\",\"Kingdom of Bhutan\"],\"subregion\":\"Southern Asia\",\"region\":\"Asia\",\"population\":771612,\"latlng\":[27.5,90.5],\"demonym\":\"Bhutanese\",\"area\":38394.0,\"gini\":37.4,\"timezones\":[\"UTC+06:00\"],\"borders\":[\"CHN\",\"IND\"],\"nativeName\":\"?brug-yul\",\"numericCode\":\"064\",\"flags\":{\"svg\":\"https://flagcdn.com/bt.svg\",\"png\":\"https://flagcdn.com/w320/bt.png\"},\"currencies\":[{\"code\":\"BTN\",\"name\":\"Bhutanese ngultrum\",\"symbol\":\"Nu.\"},{\"code\":\"INR\",\"name\":\"Indian rupee\",\"symbol\":\"?\"}],\"languages\":[{\"iso639_1\":\"dz\",\"iso639_2\":\"dzo\",\"name\":\"Dzongkha\",\"nativeName\":\"??????\"}],\"translations\":{\"br\":\"Bhoutan\",\"pt\":\"Butão\",\"nl\":\"Bhutan\",\"hr\":\"Butan\",\"fa\":\"?????\",\"de\":\"Bhutan\",\"es\":\"Bután\",\"fr\":\"Bhoutan\",\"ja\":\"????\",\"it\":\"Bhutan\",\"hu\":\"Bhután\"},\"flag\":\"https://flagcdn.com/bt.svg\",\"regionalBlocs\":[{\"acronym\":\"SAARC\",\"name\":\"South Asian Association for Regional Cooperation\"}],\"cioc\":\"BHU\",\"independent\":true}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:28:56 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:28:51 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

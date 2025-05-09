@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Capital-20230205201932015",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/capital/Jerusalem",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:32 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:32 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d99\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":\"Israel\",\"topLevelDomain\":[\".il\"],\"alpha2Code\":\"IL\",\"alpha3Code\":\"ISR\",\"callingCodes\":[\"972\"],\"capital\":\"Jerusalem\",\"altSpellings\":[\"IL\",\"State of Israel\",\"Med?nat Yisr?\u0027el\"],\"subregion\":\"Western Asia\",\"region\":\"Asia\",\"population\":9216900,\"latlng\":[31.5,34.75],\"demonym\":\"Israeli\",\"area\":20770.0,\"gini\":39.0,\"timezones\":[\"UTC+02:00\"],\"borders\":[\"EGY\",\"JOR\",\"LBN\",\"SYR\"],\"nativeName\":\"??????????\",\"numericCode\":\"376\",\"flags\":{\"svg\":\"https://flagcdn.com/il.svg\",\"png\":\"https://flagcdn.com/w320/il.png\"},\"currencies\":[{\"code\":\"ILS\",\"name\":\"Israeli new shekel\",\"symbol\":\"?\"}],\"languages\":[{\"iso639_1\":\"he\",\"iso639_2\":\"heb\",\"name\":\"Hebrew (modern)\",\"nativeName\":\"?????\"},{\"iso639_1\":\"ar\",\"iso639_2\":\"ara\",\"name\":\"Arabic\",\"nativeName\":\"???????\"}],\"translations\":{\"br\":\"Israel\",\"pt\":\"Israel\",\"nl\":\"Israël\",\"hr\":\"Izrael\",\"fa\":\"???????\",\"de\":\"Israel\",\"es\":\"Israel\",\"fr\":\"Israël\",\"ja\":\"?????\",\"it\":\"Israele\",\"hu\":\"Izrael\"},\"flag\":\"https://flagcdn.com/il.svg\",\"cioc\":\"ISR\",\"independent\":true}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:32 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:32 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

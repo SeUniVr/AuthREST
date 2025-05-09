@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Capital-20230205201958064",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/capital/Addis%20Ababa",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:59 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:59 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d92\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Ethiopia\",\"official\":\"Federal Democratic Republic of Ethiopia\",\"nativeName\":{\"amh\":{\"official\":\"?????? ????? ??????? ?????\",\"common\":\"?????\"}}},\"tld\":[\".et\"],\"cca2\":\"ET\",\"ccn3\":\"231\",\"cca3\":\"ETH\",\"cioc\":\"ETH\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"ETB\":{\"name\":\"Ethiopian birr\",\"symbol\":\"Br\"}},\"idd\":{\"root\":\"+2\",\"suffixes\":[\"51\"]},\"capital\":[\"Addis Ababa\"],\"altSpellings\":[\"ET\",\"??ty???y?\",\"Federal Democratic Republic of Ethiopia\",\"?????? ????? ??????? ?????\"],\"region\":\"Africa\",\"subregion\":\"Eastern Africa\",\"languages\":{\"amh\":\"Amharic\"},\"translations\":{\"ara\":{\"official\":\"??????? ??????? ????????? ????????????\",\"common\":\"???????\"},\"bre\":{\"official\":\"Republik Demokratel Kevredadel Etiopia\",\"common\":\"Etiopia\"},\"ces\":{\"official\":\"Etiopská federativní demokratická republika\",\"common\":\"Etiopie\"},\"cym\":{\"official\":\"Gweriniaeth Ddemocrataidd Ffederal Ethiopia\",\"common\":\"Ethiopia\"},\"deu\":{\"official\":\"Demokratische Bundesrepublik Äthiopien\",\"common\":\"Äthiopien\"},\"est\":{\"official\":\"Etioopia Demokraatlik Liitvabariik\",\"common\":\"Etioopia\"},\"fin\":{\"official\":\"Etiopian demokraattinen liittotasavalta\",\"common\":\"Etiopia\"},\"fra\":{\"official\":\"République fédérale démocratique d\u0027Éthiopie\",\"common\":\"Éthiopie\"},\"hrv\":{\"official\":\"Savezna Demokratska Republika Etiopija\",\"common\":\"Etiopija\"},\"hun\":{\"official\":\"Etióp Szövetségi Demokratikus Köztársaság\",\"common\":\"Etiópia\"},\"ita\":{\"official\":\"Repubblica federale democratica di Etiopia\",\"common\":\"Etiopia\"},\"jpn\":{\"official\":\"????????????\",\"common\":\"?????\"},\"kor\":{\"official\":\"????? ?? ?? ???\",\"common\":\"?????\"},\"nld\":{\"official\":\"Federale Democratische Republiek Ethiopië\",\"common\":\"Ethiopië\"},\"per\":{\"official\":\"?????? ????? ????????? ??????\",\"common\":\"???????\"},\"pol\":{\"official\":\"Federalna Demokratyczna Republika Etiopii\",\"common\":\"Etiopia\"},\"por\":{\"official\":\"República Federal Democrática da Etiópia\",\"common\":\"Etiópia\"},\"rus\":{\"official\":\"???????????? ??????????????? ?????????? ???????\",\"common\":\"???????\"},\"slk\":{\"official\":\"Etiópska federatívna demokratická republika\",\"common\":\"Etiópia\"},\"spa\":{\"official\":\"República Democrática Federal de Etiopía\",\"common\":\"Etiopía\"},\"swe\":{\"official\":\"Demokratiska förbundsrepubliken Etiopien\",\"common\":\"Etiopien\"},\"urd\":{\"official\":\"????? ?????? ??????? ????????\",\"common\":\"????????\"},\"zho\":{\"official\":\"????????????\",\"common\":\"?????\"}},\"latlng\":[8.0,38.0],\"landlocked\":true,\"borders\":[\"DJI\",\"ERI\",\"KEN\",\"SOM\",\"SSD\",\"SDN\"],\"area\":1104300.0,\"demonyms\":{\"eng\":{\"f\":\"Ethiopian\",\"m\":\"Ethiopian\"},\"fra\":{\"f\":\"Éthiopienne\",\"m\":\"Éthiopien\"}},\"flag\":\"\\uD83C\\uDDEA\\uD83C\\uDDF9\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/2Q4hQWCbhuZLj3fG6\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/192800\"},\"population\":114963583,\"gini\":{\"2015\":35.0},\"fifa\":\"ETH\",\"car\":{\"signs\":[\"ETH\"],\"side\":\"right\"},\"timezones\":[\"UTC+03:00\"],\"continents\":[\"Africa\"],\"flags\":[\"https://flagcdn.com/et.svg\",\"https://flagcdn.com/w320/et.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:59 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:58 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,5 @@
+name: Tradematic
+specificationFileName: tradematic.json
+host: "https://api.tradematic.com/"
+authenticationCommands:
+  default: "python C:\\Users\\49176\\Documents\\RestTestGenProjects\\auth_script.py"

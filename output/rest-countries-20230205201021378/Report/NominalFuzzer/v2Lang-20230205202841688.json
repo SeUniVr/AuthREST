@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Lang-20230205202841688",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/lang/ET",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:28:43 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:28:44 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\ncontent-length: 984\nKeep-Alive: timeout\u003d5, max\u003d63\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":\"Estonia\",\"topLevelDomain\":[\".ee\"],\"alpha2Code\":\"EE\",\"alpha3Code\":\"EST\",\"callingCodes\":[\"372\"],\"capital\":\"Tallinn\",\"altSpellings\":[\"EE\",\"Eesti\",\"Republic of Estonia\",\"Eesti Vabariik\"],\"subregion\":\"Northern Europe\",\"region\":\"Europe\",\"population\":1331057,\"latlng\":[59.0,26.0],\"demonym\":\"Estonian\",\"area\":45227.0,\"gini\":30.3,\"timezones\":[\"UTC+02:00\"],\"borders\":[\"LVA\",\"RUS\"],\"nativeName\":\"Eesti\",\"numericCode\":\"233\",\"flags\":{\"svg\":\"https://flagcdn.com/ee.svg\",\"png\":\"https://flagcdn.com/w320/ee.png\"},\"currencies\":[{\"code\":\"EUR\",\"name\":\"Euro\",\"symbol\":\"€\"}],\"languages\":[{\"iso639_1\":\"et\",\"iso639_2\":\"est\",\"name\":\"Estonian\",\"nativeName\":\"eesti\"}],\"translations\":{\"br\":\"Estonia\",\"pt\":\"Estónia\",\"nl\":\"Estland\",\"hr\":\"Estonija\",\"fa\":\"??????\",\"de\":\"Estland\",\"es\":\"Estonia\",\"fr\":\"Estonie\",\"ja\":\"?????\",\"it\":\"Estonia\",\"hu\":\"Észtország\"},\"flag\":\"https://flagcdn.com/ee.svg\",\"regionalBlocs\":[{\"acronym\":\"EU\",\"name\":\"European Union\"}],\"cioc\":\"EST\",\"independent\":true}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:28:43 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:28:41 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

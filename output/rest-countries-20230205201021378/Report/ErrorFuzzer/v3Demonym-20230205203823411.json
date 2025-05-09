@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v3Demonym-20230205203823411",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/demonym/%7Bdemonym%7D",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:38:23 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 404
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:38:23 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 36\nKeep-Alive: timeout\u003d5, max\u003d21\nConnection: Keep-Alive\n",
+      "responseBody": "{\"status\":404,\"message\":\"Not Found\"}",
+      "responseReceivedAt": "Feb 5, 2023, 8:38:23 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:38:23 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "PASS",
+      "message": "The erroneous test sequence was rejected by the server."
+    }
+  },
+  "tags": []
+}

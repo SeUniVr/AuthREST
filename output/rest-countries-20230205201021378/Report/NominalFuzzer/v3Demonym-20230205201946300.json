@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Demonym-20230205201946300",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/demonym/Icelander",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:49 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:49 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d98\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Iceland\",\"official\":\"Iceland\",\"nativeName\":{\"isl\":{\"official\":\"Ísland\",\"common\":\"Ísland\"}}},\"tld\":[\".is\"],\"cca2\":\"IS\",\"ccn3\":\"352\",\"cca3\":\"ISL\",\"cioc\":\"ISL\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"ISK\":{\"name\":\"Icelandic króna\",\"symbol\":\"kr\"}},\"idd\":{\"root\":\"+3\",\"suffixes\":[\"54\"]},\"capital\":[\"Reykjavik\"],\"altSpellings\":[\"IS\",\"Island\",\"Republic of Iceland\",\"Lýðveldið Ísland\"],\"region\":\"Europe\",\"subregion\":\"Northern Europe\",\"languages\":{\"isl\":\"Icelandic\"},\"translations\":{\"ara\":{\"official\":\"???????\",\"common\":\"???????\"},\"bre\":{\"official\":\"Island\",\"common\":\"Island\"},\"ces\":{\"official\":\"Island\",\"common\":\"Island\"},\"cym\":{\"official\":\"Iceland\",\"common\":\"Iceland\"},\"deu\":{\"official\":\"Island\",\"common\":\"Island\"},\"est\":{\"official\":\"Islandi Vabariik\",\"common\":\"Island\"},\"fin\":{\"official\":\"Islanti\",\"common\":\"Islanti\"},\"fra\":{\"official\":\"République d\u0027Islande\",\"common\":\"Islande\"},\"hrv\":{\"official\":\"Island\",\"common\":\"Island\"},\"hun\":{\"official\":\"Izland\",\"common\":\"Izland\"},\"ita\":{\"official\":\"Islanda\",\"common\":\"Islanda\"},\"jpn\":{\"official\":\"??????\",\"common\":\"??????\"},\"kor\":{\"official\":\"????? ???\",\"common\":\"?????\"},\"nld\":{\"official\":\"IJsland\",\"common\":\"IJsland\"},\"per\":{\"official\":\"?????? ??????\",\"common\":\"??????\"},\"pol\":{\"official\":\"Republika Islandii\",\"common\":\"Islandia\"},\"por\":{\"official\":\"Islândia\",\"common\":\"Islândia\"},\"rus\":{\"official\":\"????????\",\"common\":\"????????\"},\"slk\":{\"official\":\"Islandská republika\",\"common\":\"Island\"},\"spa\":{\"official\":\"Islandia\",\"common\":\"Islandia\"},\"swe\":{\"official\":\"Island\",\"common\":\"Island\"},\"urd\":{\"official\":\"??? ????\",\"common\":\"??? ????\"},\"zho\":{\"official\":\"??\",\"common\":\"??\"}},\"latlng\":[65.0,-18.0],\"landlocked\":false,\"area\":103000.0,\"demonyms\":{\"eng\":{\"f\":\"Icelander\",\"m\":\"Icelander\"},\"fra\":{\"f\":\"Islandaise\",\"m\":\"Islandais\"}},\"flag\":\"\\uD83C\\uDDEE\\uD83C\\uDDF8\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/WxFWSQuc3oamNxoE6\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/299133\"},\"population\":366425,\"gini\":{\"2017\":26.1},\"fifa\":\"ISL\",\"car\":{\"signs\":[\"IS\"],\"side\":\"right\"},\"timezones\":[\"UTC\"],\"continents\":[\"Europe\"],\"flags\":[\"https://flagcdn.com/is.svg\",\"https://flagcdn.com/w320/is.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:49 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:46 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

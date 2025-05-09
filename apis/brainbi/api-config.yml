@@ -1,0 +1,4 @@
+name: brainbi
+specificationFileName: brainbi.json
+authenticationCommands:
+  default: "python apis/brainbi/scripts/auth.py"

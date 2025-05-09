@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Capital-20230205201932104",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/capital/Vilnius?fields\u003dm",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:34 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:34 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\ncontent-length: 23\nKeep-Alive: timeout\u003d5, max\u003d91\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"independent\":false}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:34 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:32 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

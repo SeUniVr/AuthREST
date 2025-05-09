@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v3Name-20230205204112778",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/name/Gabon?fullText\u003d57cd2e9",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:41:12 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:41:13 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d37\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Gabon\",\"official\":\"Gabonese Republic\",\"nativeName\":{\"fra\":{\"official\":\"République gabonaise\",\"common\":\"Gabon\"}}},\"tld\":[\".ga\"],\"cca2\":\"GA\",\"ccn3\":\"266\",\"cca3\":\"GAB\",\"cioc\":\"GAB\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"XAF\":{\"name\":\"Central African CFA franc\",\"symbol\":\"Fr\"}},\"idd\":{\"root\":\"+2\",\"suffixes\":[\"41\"]},\"capital\":[\"Libreville\"],\"altSpellings\":[\"GA\",\"Gabonese Republic\",\"République Gabonaise\"],\"region\":\"Africa\",\"subregion\":\"Middle Africa\",\"languages\":{\"fra\":\"French\"},\"translations\":{\"ara\":{\"official\":\"??????? ???????\",\"common\":\"???????\"},\"bre\":{\"official\":\"Republik Gabonat\",\"common\":\"Gabon\"},\"ces\":{\"official\":\"Gabonská republika\",\"common\":\"Gabon\"},\"cym\":{\"official\":\"Gabonese Republic\",\"common\":\"Gabon\"},\"deu\":{\"official\":\"Gabunische Republik\",\"common\":\"Gabun\"},\"est\":{\"official\":\"Gaboni Vabariik\",\"common\":\"Gabon\"},\"fin\":{\"official\":\"Gabonin tasavalta\",\"common\":\"Gabon\"},\"fra\":{\"official\":\"République gabonaise\",\"common\":\"Gabon\"},\"hrv\":{\"official\":\"Gabon Republika\",\"common\":\"Gabon\"},\"hun\":{\"official\":\"Gaboni Köztársaság\",\"common\":\"Gabon\"},\"ita\":{\"official\":\"Repubblica gabonese\",\"common\":\"Gabon\"},\"jpn\":{\"official\":\"??????\",\"common\":\"???\"},\"kor\":{\"official\":\"?? ???\",\"common\":\"??\"},\"nld\":{\"official\":\"Republiek Gabon\",\"common\":\"Gabon\"},\"per\":{\"official\":\"?????? ?????\",\"common\":\"????\"},\"pol\":{\"official\":\"Republika Gabo?ska\",\"common\":\"Gabon\"},\"por\":{\"official\":\"República do Gabão\",\"common\":\"Gabão\"},\"rus\":{\"official\":\"?????? ??????????\",\"common\":\"?????\"},\"slk\":{\"official\":\"Gabonská republika\",\"common\":\"Gabon\"},\"spa\":{\"official\":\"República de Gabón\",\"common\":\"Gabón\"},\"swe\":{\"official\":\"Republiken Gabon\",\"common\":\"Gabon\"},\"urd\":{\"official\":\"??????? ?????\",\"common\":\"?????\"},\"zho\":{\"official\":\"?????\",\"common\":\"??\"}},\"latlng\":[-1.0,11.75],\"landlocked\":false,\"borders\":[\"CMR\",\"COG\",\"GNQ\"],\"area\":267668.0,\"demonyms\":{\"eng\":{\"f\":\"Gabonese\",\"m\":\"Gabonese\"},\"fra\":{\"f\":\"Gabonaise\",\"m\":\"Gabonais\"}},\"flag\":\"\\uD83C\\uDDEC\\uD83C\\uDDE6\",\"maps\":{\"googleMaps\":\"https://www.openstreetmap.org/relation/192793\",\"openStreetMaps\":\"https://goo.gl/maps/vyRSkqw1H1fnq4ry6\"},\"population\":2225728,\"gini\":{\"2017\":38.0},\"fifa\":\"GAB\",\"car\":{\"signs\":[\"G\"],\"side\":\"right\"},\"timezones\":[\"UTC+01:00\"],\"continents\":[\"Africa\"],\"flags\":[\"https://flagcdn.com/ga.svg\",\"https://flagcdn.com/w320/ga.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:41:12 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:41:12 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "FAIL",
+      "message": "The erroneous test sequence was accepted as valid by the server."
+    }
+  },
+  "tags": []
+}

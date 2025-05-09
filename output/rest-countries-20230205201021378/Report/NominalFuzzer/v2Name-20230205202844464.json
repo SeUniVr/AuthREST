@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Name-20230205202844464",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/name/Syrian%20Arab%20Republic",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:28:45 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:28:45 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d53\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":\"Syrian Arab Republic\",\"topLevelDomain\":[\".sy\"],\"alpha2Code\":\"SY\",\"alpha3Code\":\"SYR\",\"callingCodes\":[\"963\"],\"capital\":\"Damascus\",\"altSpellings\":[\"SY\",\"Syrian Arab Republic\",\"Al-Jumh?r?yah Al-?Arab?yah As-S?r?yah\"],\"subregion\":\"Western Asia\",\"region\":\"Asia\",\"population\":17500657,\"latlng\":[35.0,38.0],\"demonym\":\"Syrian\",\"area\":185180.0,\"gini\":37.5,\"timezones\":[\"UTC+02:00\"],\"borders\":[\"IRQ\",\"ISR\",\"JOR\",\"LBN\",\"TUR\"],\"nativeName\":\"?????\",\"numericCode\":\"760\",\"flags\":{\"svg\":\"https://flagcdn.com/sy.svg\",\"png\":\"https://flagcdn.com/w320/sy.png\"},\"currencies\":[{\"code\":\"SYP\",\"name\":\"Syrian pound\",\"symbol\":\"£\"}],\"languages\":[{\"iso639_1\":\"ar\",\"iso639_2\":\"ara\",\"name\":\"Arabic\",\"nativeName\":\"???????\"}],\"translations\":{\"br\":\"Siria\",\"pt\":\"Síria\",\"nl\":\"Syrië\",\"hr\":\"Sirija\",\"fa\":\"?????\",\"de\":\"Syrien\",\"es\":\"Siria\",\"fr\":\"Syrie\",\"ja\":\"??????????\",\"it\":\"Siria\",\"hu\":\"Szíria\"},\"flag\":\"https://flagcdn.com/sy.svg\",\"regionalBlocs\":[{\"acronym\":\"AL\",\"name\":\"Arab League\",\"otherNames\":[\"????? ????? ???????\",\"J?mi?at ad-Duwal al-?Arab?yah\",\"League of Arab States\"]}],\"cioc\":\"SYR\",\"independent\":true}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:28:45 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:28:44 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

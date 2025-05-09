@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Region-20230205202856861",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/Antarctic?fields\u003dpolitico-sacerdotal",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:28:57 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 404
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:28:58 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 116\nKeep-Alive: timeout\u003d5, max\u003d94\nConnection: Keep-Alive\n",
+      "responseBody": "{\"message\":\"Page Not Found\",\"_links\":{\"self\":{\"href\":\"/v2/Antarctic?fields\u003dpolitico-sacerdotal\",\"templated\":false}}}",
+      "responseReceivedAt": "Feb 5, 2023, 8:28:58 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:28:56 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "UNKNOWN",
+      "message": "The obtained status code is not informative enough to determine the outcome of the test sequence."
+    }
+  },
+  "tags": []
+}

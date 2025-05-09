@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Capital-20230205201958073",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/capital/Cairo",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:20:00 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:20:00 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d90\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Egypt\",\"official\":\"Arab Republic of Egypt\",\"nativeName\":{\"ara\":{\"official\":\"??????? ??? ???????\",\"common\":\"???\"}}},\"tld\":[\".eg\",\".???\"],\"cca2\":\"EG\",\"ccn3\":\"818\",\"cca3\":\"EGY\",\"cioc\":\"EGY\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"EGP\":{\"name\":\"Egyptian pound\",\"symbol\":\"£\"}},\"idd\":{\"root\":\"+2\",\"suffixes\":[\"0\"]},\"capital\":[\"Cairo\"],\"altSpellings\":[\"EG\",\"Arab Republic of Egypt\"],\"region\":\"Africa\",\"subregion\":\"Northern Africa\",\"languages\":{\"ara\":\"Arabic\"},\"translations\":{\"ara\":{\"official\":\"??????? ??? ???????\",\"common\":\"???\"},\"bre\":{\"official\":\"Republik arab Egipt\",\"common\":\"Egipt\"},\"ces\":{\"official\":\"Egyptská arabská republika\",\"common\":\"Egypt\"},\"cym\":{\"official\":\"Gweriniaeth Arabaidd yr Aifft\",\"common\":\"Yr Aifft\"},\"deu\":{\"official\":\"Arabische Republik Ägypten\",\"common\":\"Ägypten\"},\"est\":{\"official\":\"Egiptuse Araabia Vabariik\",\"common\":\"Egiptus\"},\"fin\":{\"official\":\"Egyptin arabitasavalta\",\"common\":\"Egypti\"},\"fra\":{\"official\":\"République arabe d\u0027Égypte\",\"common\":\"Égypte\"},\"hrv\":{\"official\":\"Arapska Republika Egipat\",\"common\":\"Egipat\"},\"hun\":{\"official\":\"Egyiptomi Arab Köztársaság\",\"common\":\"Egyiptom\"},\"ita\":{\"official\":\"Repubblica araba d\u0027Egitto\",\"common\":\"Egitto\"},\"jpn\":{\"official\":\"????·??????\",\"common\":\"????\"},\"kor\":{\"official\":\"??? ?? ???\",\"common\":\"???\"},\"nld\":{\"official\":\"Arabische Republiek Egypte\",\"common\":\"Egypte\"},\"per\":{\"official\":\"?????? ???? ???\",\"common\":\"???\"},\"pol\":{\"official\":\"Arabska Republika Egiptu\",\"common\":\"Egipt\"},\"por\":{\"official\":\"República Árabe do Egipto\",\"common\":\"Egito\"},\"rus\":{\"official\":\"???????? ?????????? ??????\",\"common\":\"??????\"},\"slk\":{\"official\":\"Egyptská arabská republika\",\"common\":\"Egypt\"},\"spa\":{\"official\":\"República Árabe de Egipto\",\"common\":\"Egipto\"},\"swe\":{\"official\":\"Arabrepubliken Egypten\",\"common\":\"Egypten\"},\"urd\":{\"official\":\"???? ??? ???????\",\"common\":\"???\"},\"zho\":{\"official\":\"????????\",\"common\":\"??\"}},\"latlng\":[27.0,30.0],\"landlocked\":false,\"borders\":[\"ISR\",\"LBY\",\"PSE\",\"SDN\"],\"area\":1002450.0,\"demonyms\":{\"eng\":{\"f\":\"Egyptian\",\"m\":\"Egyptian\"},\"fra\":{\"f\":\"Égyptienne\",\"m\":\"Égyptien\"}},\"flag\":\"\\uD83C\\uDDEA\\uD83C\\uDDEC\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/uoDRhXbsqjG6L7VG7\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/1473947\"},\"population\":102334403,\"gini\":{\"2017\":31.5},\"fifa\":\"EGY\",\"car\":{\"signs\":[\"ET\"],\"side\":\"right\"},\"timezones\":[\"UTC+02:00\"],\"continents\":[\"Africa\"],\"flags\":[\"https://flagcdn.com/eg.svg\",\"https://flagcdn.com/w320/eg.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:20:00 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:58 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

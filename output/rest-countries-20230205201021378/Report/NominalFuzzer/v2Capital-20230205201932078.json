@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Capital-20230205201932078",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/capital/Castries",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:33 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:33 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d93\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":\"Saint Lucia\",\"topLevelDomain\":[\".lc\"],\"alpha2Code\":\"LC\",\"alpha3Code\":\"LCA\",\"callingCodes\":[\"1\"],\"capital\":\"Castries\",\"altSpellings\":[\"LC\"],\"subregion\":\"Caribbean\",\"region\":\"Americas\",\"population\":183629,\"latlng\":[13.88333333,-60.96666666],\"demonym\":\"Saint Lucian\",\"area\":616.0,\"gini\":51.2,\"timezones\":[\"UTC-04:00\"],\"nativeName\":\"Saint Lucia\",\"numericCode\":\"662\",\"flags\":{\"svg\":\"https://flagcdn.com/lc.svg\",\"png\":\"https://flagcdn.com/w320/lc.png\"},\"currencies\":[{\"code\":\"XCD\",\"name\":\"East Caribbean dollar\",\"symbol\":\"$\"}],\"languages\":[{\"iso639_1\":\"en\",\"iso639_2\":\"eng\",\"name\":\"English\",\"nativeName\":\"English\"}],\"translations\":{\"br\":\"Santez-Lusia\",\"pt\":\"Santa Lúcia\",\"nl\":\"Saint Lucia\",\"hr\":\"Sveta Lucija\",\"fa\":\"??? ?????\",\"de\":\"Saint Lucia\",\"es\":\"Santa Lucía\",\"fr\":\"Saint-Lucie\",\"ja\":\"??????\",\"it\":\"Santa Lucia\",\"hu\":\"Saint Lucia\"},\"flag\":\"https://flagcdn.com/lc.svg\",\"regionalBlocs\":[{\"acronym\":\"CARICOM\",\"name\":\"Caribbean Community\",\"otherNames\":[\"Comunidad del Caribe\",\"Communauté Caribéenne\",\"Caribische Gemeenschap\"]}],\"cioc\":\"LCA\",\"independent\":true}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:33 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:32 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

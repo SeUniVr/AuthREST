@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Name-20230205202844491",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/name/BYU?fullText\u003dfalse",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:28:46 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 404
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:28:46 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 36\nKeep-Alive: timeout\u003d5, max\u003d48\nConnection: Keep-Alive\n",
+      "responseBody": "{\"status\":404,\"message\":\"Not Found\"}",
+      "responseReceivedAt": "Feb 5, 2023, 8:28:46 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:28:44 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "UNKNOWN",
+      "message": "The obtained status code is not informative enough to determine the outcome of the test sequence."
+    }
+  },
+  "tags": []
+}

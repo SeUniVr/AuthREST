@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v2Name-20230205204102015",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/name/Cura%C3%A7ao?fullText\u003dthae",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:41:02 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:41:02 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d16\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":\"Curaçao\",\"topLevelDomain\":[\".cw\"],\"alpha2Code\":\"CW\",\"alpha3Code\":\"CUW\",\"callingCodes\":[\"599\"],\"capital\":\"Willemstad\",\"altSpellings\":[\"CW\",\"Curacao\",\"Kòrsou\",\"Country of Curaçao\",\"Land Curaçao\",\"Pais Kòrsou\"],\"subregion\":\"Caribbean\",\"region\":\"Americas\",\"population\":155014,\"latlng\":[12.116667,-68.933333],\"demonym\":\"Dutch\",\"area\":444.0,\"timezones\":[\"UTC-04:00\"],\"nativeName\":\"Curaçao\",\"numericCode\":\"531\",\"flags\":{\"svg\":\"https://flagcdn.com/cw.svg\",\"png\":\"https://flagcdn.com/w320/cw.png\"},\"currencies\":[{\"code\":\"ANG\",\"name\":\"Netherlands Antillean guilder\",\"symbol\":\"ƒ\"}],\"languages\":[{\"iso639_1\":\"nl\",\"iso639_2\":\"nld\",\"name\":\"Dutch\",\"nativeName\":\"Nederlands\"},{\"iso639_1\":\"pa\",\"iso639_2\":\"pan\",\"name\":\"(Eastern) Punjabi\",\"nativeName\":\"??????\"},{\"iso639_1\":\"en\",\"iso639_2\":\"eng\",\"name\":\"English\",\"nativeName\":\"English\"}],\"translations\":{\"br\":\"Curaçao\",\"pt\":\"Curaçao\",\"nl\":\"Curaçao\",\"hr\":\"Curaçao\",\"fa\":\"????????\",\"de\":\"Curaçao\",\"es\":\"Curaçao\",\"fr\":\"Curaçao\",\"ja\":\"Curaçao\",\"it\":\"Curaçao\",\"hu\":\"Curaçao\"},\"flag\":\"https://flagcdn.com/cw.svg\",\"independent\":false}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:41:02 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:41:02 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "FAIL",
+      "message": "The erroneous test sequence was accepted as valid by the server."
+    }
+  },
+  "tags": []
+}

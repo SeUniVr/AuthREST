@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v3Name-20230205204119393",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/name/Svalbard%20and%20Jan%20Mayen?fullText\u003d-2.0608364E38\u0026fields\u003dWF",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:41:19 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:41:19 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\ncontent-type: application/json\ncontent-length: 58\nKeep-Alive: timeout\u003d5, max\u003d99\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"altSpellings\":[\"SJ\",\"Svalbard and Jan Mayen Islands\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:41:19 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:41:19 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "FAIL",
+      "message": "The erroneous test sequence was accepted as valid by the server."
+    }
+  },
+  "tags": []
+}

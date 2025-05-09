@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Lang-20230205203301222",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/lang/copiously",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:33:01 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 404
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:33:01 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 36\nKeep-Alive: timeout\u003d5, max\u003d37\nConnection: Keep-Alive\n",
+      "responseBody": "{\"status\":404,\"message\":\"Not Found\"}",
+      "responseReceivedAt": "Feb 5, 2023, 8:33:01 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:33:01 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "UNKNOWN",
+      "message": "The obtained status code is not informative enough to determine the outcome of the test sequence."
+    }
+  },
+  "tags": []
+}

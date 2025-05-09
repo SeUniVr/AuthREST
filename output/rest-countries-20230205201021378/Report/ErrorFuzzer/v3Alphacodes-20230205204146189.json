@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v3Alphacodes-20230205204146189",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/alpha?fields\u003dIsole%20%C3%85land",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:41:46 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 400
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:41:46 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 159\nConnection: close\n",
+      "responseBody": "{\"message\":\"Required argument [String codes] not specified\",\"path\":\"/codes\",\"_links\":{\"self\":{\"href\":\"/v3/alpha?fields\u003dIsole%20%C3%85land\",\"templated\":false}}}",
+      "responseReceivedAt": "Feb 5, 2023, 8:41:46 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:41:46 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "PASS",
+      "message": "The erroneous test sequence was rejected by the server."
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Alphacodes-20230205203216449",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/alpha?codes\u003dFF%20D%20awabi%20DU",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:32:20 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 400
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:32:20 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 38\nConnection: close\n",
+      "responseBody": "{\"status\":400,\"message\":\"Bad Request\"}",
+      "responseReceivedAt": "Feb 5, 2023, 8:32:20 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:32:16 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "UNKNOWN",
+      "message": "The obtained status code is not informative enough to determine the outcome of the test sequence."
+    }
+  },
+  "tags": []
+}

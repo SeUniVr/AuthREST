@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Capital-20230205201958083",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/capital/Baku",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:20:00 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:20:00 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d88\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Azerbaijan\",\"official\":\"Republic of Azerbaijan\",\"nativeName\":{\"aze\":{\"official\":\"Az?rbaycan Respublikas?\",\"common\":\"Az?rbaycan\"},\"rus\":{\"official\":\"??????????????? ??????????\",\"common\":\"???????????\"}}},\"tld\":[\".az\"],\"cca2\":\"AZ\",\"ccn3\":\"031\",\"cca3\":\"AZE\",\"cioc\":\"AZE\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"AZN\":{\"name\":\"Azerbaijani manat\",\"symbol\":\"?\"}},\"idd\":{\"root\":\"+9\",\"suffixes\":[\"94\"]},\"capital\":[\"Baku\"],\"altSpellings\":[\"AZ\",\"Republic of Azerbaijan\",\"Az?rbaycan Respublikas?\"],\"region\":\"Asia\",\"subregion\":\"Western Asia\",\"languages\":{\"aze\":\"Azerbaijani\",\"rus\":\"Russian\"},\"translations\":{\"ara\":{\"official\":\"??????? ????????\",\"common\":\"????????\"},\"bre\":{\"official\":\"Republik Azerbaidjan\",\"common\":\"Azerbaidjan\"},\"ces\":{\"official\":\"Ázerbájdžánská republika\",\"common\":\"Ázerbájdžán\"},\"cym\":{\"official\":\"Gweriniaeth Aserbaijan\",\"common\":\"Aserbaijan\"},\"deu\":{\"official\":\"Republik Aserbaidschan\",\"common\":\"Aserbaidschan\"},\"est\":{\"official\":\"Aserbaidžaani Vabariik\",\"common\":\"Aserbaidžaan\"},\"fin\":{\"official\":\"Azerbaidzanin tasavalta\",\"common\":\"Azerbaidzan\"},\"fra\":{\"official\":\"République d\u0027Azerbaïdjan\",\"common\":\"Azerbaïdjan\"},\"hrv\":{\"official\":\"Republika Azerbajdžan\",\"common\":\"Azerbajdžan\"},\"hun\":{\"official\":\"Azerbajdzsán\",\"common\":\"Azerbajdzsán\"},\"ita\":{\"official\":\"Repubblica dell\u0027Azerbaigian\",\"common\":\"Azerbaijan\"},\"jpn\":{\"official\":\"???????????\",\"common\":\"????????\"},\"kor\":{\"official\":\"?????? ???\",\"common\":\"??????\"},\"nld\":{\"official\":\"Republiek Azerbeidzjan\",\"common\":\"Azerbeidzjan\"},\"per\":{\"official\":\"?????? ?????????\",\"common\":\"?????? ?????????\"},\"pol\":{\"official\":\"Republika Azerbejd?anu\",\"common\":\"Azerbejd?an\"},\"por\":{\"official\":\"República do Azerbaijão\",\"common\":\"Azerbeijão\"},\"rus\":{\"official\":\"??????????????? ??????????\",\"common\":\"???????????\"},\"slk\":{\"official\":\"Azerbaj?anská republika\",\"common\":\"Azerbaj?an\"},\"spa\":{\"official\":\"República de Azerbaiyán\",\"common\":\"Azerbaiyán\"},\"swe\":{\"official\":\"Republiken Azerbajdzjan\",\"common\":\"Azerbajdzjan\"},\"urd\":{\"official\":\"??????? ??????????\",\"common\":\"??????????\"},\"zho\":{\"official\":\"???????\",\"common\":\"????\"}},\"latlng\":[40.5,47.5],\"landlocked\":true,\"borders\":[\"ARM\",\"GEO\",\"IRN\",\"RUS\",\"TUR\"],\"area\":86600.0,\"demonyms\":{\"eng\":{\"f\":\"Azerbaijani\",\"m\":\"Azerbaijani\"},\"fra\":{\"f\":\"Azerbaïdjanaise\",\"m\":\"Azerbaïdjanais\"}},\"flag\":\"\\uD83C\\uDDE6\\uD83C\\uDDFF\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/az3Zz7ar2aoB9AUc6\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/364110\"},\"population\":10110116,\"gini\":{\"2005\":26.6},\"fifa\":\"AZE\",\"car\":{\"signs\":[\"AZ\"],\"side\":\"right\"},\"timezones\":[\"UTC+04:00\"],\"continents\":[\"Asia\"],\"flags\":[\"https://flagcdn.com/az.svg\",\"https://flagcdn.com/w320/az.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:20:00 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:58 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

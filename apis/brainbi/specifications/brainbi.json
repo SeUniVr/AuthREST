@@ -1,0 +1,98 @@
+{
+  "openapi": "3.0.1",
+  "servers": [
+    {
+      "url": "https://app.brainbi.dev"
+    }
+  ],
+  "info": {
+    "title": "BrainBI Login",
+    "version": "1.0",
+    "description": "This is the BrainBI login API",
+    "contact": {
+      "name": "support",
+      "email": "support@brainbi.dev"
+    }
+  },
+  "tags": [
+    {
+      "description": "Management of BrainBI user authentication",
+      "name": "api-login"
+    }
+  ],
+  "paths": {
+    "/login": {
+      "get": {
+        "tags": [
+          "login"
+        ],
+        "operationId": "userLogin",
+        "parameters": [
+          {
+            "name": "username",
+            "description": "The username of the BrainBI user.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "description": "The password of the BrainBI user.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "description": "The two-factor authentication code of the user.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/commonReturn"
+                }
+              }
+            },
+            "description": "The user login success."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "commonReturn": {
+        "properties": {
+          "msg": {
+            "description": "The login result message.",
+            "type": "string",
+            "example": "Login successful"
+          },
+          "code": {
+            "description": "The status code of the login request.",
+            "type": "string",
+            "example": "200"
+          },
+          "token": {
+            "description": "The authentication token received upon successful login.",
+            "type": "string",
+            "example": "eyJhbGciOiJIUzUxMiJ9"
+          }
+        },
+        "type": "object"
+      }
+    }
+  }
+}

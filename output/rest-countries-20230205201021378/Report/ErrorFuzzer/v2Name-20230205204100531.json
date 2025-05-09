@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v2Name-20230205204100531",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/name/Svalbard%20and%20Jan%20Mayen?fullText\u003d-7962755943447263232",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:41:00 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:41:00 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d26\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":\"Svalbard and Jan Mayen\",\"topLevelDomain\":[\".sj\"],\"alpha2Code\":\"SJ\",\"alpha3Code\":\"SJM\",\"callingCodes\":[\"47\"],\"capital\":\"Longyearbyen\",\"altSpellings\":[\"SJ\",\"Svalbard and Jan Mayen Islands\"],\"subregion\":\"Northern Europe\",\"region\":\"Europe\",\"population\":2562,\"latlng\":[78.0,20.0],\"demonym\":\"Norwegian\",\"timezones\":[\"UTC+01:00\"],\"nativeName\":\"Svalbard og Jan Mayen\",\"numericCode\":\"744\",\"flags\":{\"svg\":\"https://flagcdn.com/sj.svg\",\"png\":\"https://flagcdn.com/w320/sj.png\"},\"currencies\":[{\"code\":\"NOK\",\"name\":\"Norwegian krone\",\"symbol\":\"kr\"}],\"languages\":[{\"iso639_1\":\"no\",\"iso639_2\":\"nor\",\"name\":\"Norwegian\",\"nativeName\":\"Norsk\"}],\"translations\":{\"br\":\"Svalbard ha Jan Mayen\",\"pt\":\"Svalbard\",\"nl\":\"Svalbard en Jan Mayen\",\"hr\":\"Svalbard i Jan Mayen\",\"fa\":\"???????? ? ??? ????\",\"de\":\"Svalbard und Jan Mayen\",\"es\":\"Islas Svalbard y Jan Mayen\",\"fr\":\"Svalbard et Jan Mayen\",\"ja\":\"???????????????????\",\"it\":\"Svalbard e Jan Mayen\",\"hu\":\"Spitzbergák és Jan Mayen-szigetek\"},\"flag\":\"https://flagcdn.com/sj.svg\",\"independent\":false}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:41:00 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:41:00 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "FAIL",
+      "message": "The erroneous test sequence was accepted as valid by the server."
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,23 @@
+digraph G {
+  1 [ label="GET /v3/demonym/{demonym}" ];
+  2 [ label="GET /v2/name/{name}" ];
+  3 [ label="GET /v2/alpha" ];
+  4 [ label="GET /v2/regionalbloc/{regionalbloc}" ];
+  5 [ label="GET /v3/lang/{lang}" ];
+  6 [ label="GET /v2/currency/{currency}" ];
+  7 [ label="GET /v3/translation/{translation}" ];
+  8 [ label="GET /v3/name/{name}" ];
+  9 [ label="GET /v2/capital/{capital}" ];
+  10 [ label="GET /v3/currency/{currency}" ];
+  11 [ label="GET /v3/alpha/{alphacode}" ];
+  12 [ label="GET /v2/alpha/{alphacode}" ];
+  13 [ label="GET /v2/callingcode/{callingcode}" ];
+  14 [ label="GET /v2/lang/{lang}" ];
+  15 [ label="GET /v3/capital/{capital}" ];
+  16 [ label="GET /v3/all" ];
+  17 [ label="GET /v2/{region}" ];
+  18 [ label="GET /v3/alpha" ];
+  19 [ label="GET /v2/all" ];
+  20 [ label="GET /v3/subregion/{subregion}" ];
+  21 [ label="GET /v3.1/region/{region}" ];
+}

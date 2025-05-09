@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v3Region-20230205204040809",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3.1/region/Oceania?fields\u003dtrue",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:40:40 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:40:41 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\ncontent-type: application/json\nKeep-Alive: timeout\u003d5, max\u003d7\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"altSpellings\":[\"MP\",\"Commonwealth of the Northern Mariana Islands\",\"Sankattan Siha Na Islas Mariånas\"]},{\"altSpellings\":[\"PF\",\"Polynésie française\",\"French Polynesia\",\"P?r?netia Far?ni\"]},{\"altSpellings\":[\"NU\"]},{\"altSpellings\":[\"TO\"]},{\"altSpellings\":[\"NZ\",\"Aotearoa\"]},{\"altSpellings\":[\"GU\",\"Guåhån\"]},{\"altSpellings\":[\"WS\",\"Independent State of Samoa\",\"Malo Sa?oloto Tuto?atasi o S?moa\"]},{\"altSpellings\":[\"PW\",\"Republic of Palau\",\"Beluu er a Belau\"]},{\"altSpellings\":[\"VU\",\"Republic of Vanuatu\",\"Ripablik blong Vanuatu\",\"République de Vanuatu\"]},{\"altSpellings\":[\"NC\"]},{\"altSpellings\":[\"TV\"]},{\"altSpellings\":[\"FJ\",\"Viti\",\"Republic of Fiji\",\"Matanitu ko Viti\",\"Fij? Ga?ar?jya\"]},{\"altSpellings\":[\"AU\"]},{\"altSpellings\":[\"WF\",\"Territory of the Wallis and Futuna Islands\",\"Territoire des îles Wallis et Futuna\"]},{\"altSpellings\":[\"PG\",\"Independent State of Papua New Guinea\",\"Independen Stet bilong Papua Niugini\"]},{\"altSpellings\":[\"FM\",\"Federated States of Micronesia\",\"Micronesia, Federated States of\"]},{\"altSpellings\":[\"CC\",\"Keeling Islands\",\"Cocos Islands\"]},{\"altSpellings\":[\"NF\",\"Territory of Norfolk Island\",\"Teratri of Norf\u0027k Ailen\"]},{\"altSpellings\":[\"SB\"]},{\"altSpellings\":[\"KI\",\"Republic of Kiribati\",\"Ribaberiki Kiribati\"]},{\"altSpellings\":[\"NR\",\"Naoero\",\"Pleasant Island\",\"Republic of Nauru\",\"Ripublik Naoero\"]},{\"altSpellings\":[\"AS\",\"Amerika S?moa\",\"Amelika S?moa\",\"S?moa Amelika\"]},{\"altSpellings\":[\"TK\"]},{\"altSpellings\":[\"MH\",\"Republic of the Marshall Islands\",\"Aolep?n Aor?kin M?aje?\"]},{\"altSpellings\":[\"CK\",\"K?ki \u0027?irani\"]},{\"altSpellings\":[\"PN\",\"Pitcairn\",\"Pitcairn Henderson Ducie and Oeno Islands\"]},{\"altSpellings\":[\"CX\",\"Territory of Christmas Island\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:40:40 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:40:40 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "FAIL",
+      "message": "The erroneous test sequence was accepted as valid by the server."
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Demonym-20230205201946334",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/demonym/%C3%85landish",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:51 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:51 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d100\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Åland Islands\",\"official\":\"Åland Islands\",\"nativeName\":{\"swe\":{\"official\":\"Landskapet Åland\",\"common\":\"Åland\"}}},\"tld\":[\".ax\"],\"cca2\":\"AX\",\"ccn3\":\"248\",\"cca3\":\"ALA\",\"independent\":false,\"status\":\"officially-assigned\",\"unMember\":false,\"currencies\":{\"EUR\":{\"name\":\"Euro\",\"symbol\":\"€\"}},\"idd\":{\"root\":\"+3\",\"suffixes\":[\"5818\"]},\"capital\":[\"Mariehamn\"],\"altSpellings\":[\"AX\",\"Aaland\",\"Aland\",\"Ahvenanmaa\"],\"region\":\"Europe\",\"subregion\":\"Northern Europe\",\"languages\":{\"swe\":\"Swedish\"},\"translations\":{\"ara\":{\"official\":\"??? ??????\",\"common\":\"??? ??????\"},\"bre\":{\"official\":\"Inizi Åland\",\"common\":\"Åland\"},\"ces\":{\"official\":\"Ålandské ostrovy\",\"common\":\"Ålandy\"},\"cym\":{\"official\":\"Åland Islands\",\"common\":\"Åland Islands\"},\"deu\":{\"official\":\"Åland-Inseln\",\"common\":\"Åland\"},\"est\":{\"official\":\"Ahvenamaa maakond\",\"common\":\"Ahvenamaa\"},\"fin\":{\"official\":\"Ahvenanmaan maakunta\",\"common\":\"Ahvenanmaa\"},\"fra\":{\"official\":\"Ahvenanmaa\",\"common\":\"Ahvenanmaa\"},\"hrv\":{\"official\":\"Aland Islands\",\"common\":\"Ålandski otoci\"},\"hun\":{\"official\":\"Åland-szigetek\",\"common\":\"Åland-szigetek\"},\"ita\":{\"official\":\"Isole Åland\",\"common\":\"Isole Aland\"},\"jpn\":{\"official\":\"???????\",\"common\":\"???????\"},\"kor\":{\"official\":\"??? ??\",\"common\":\"??? ??\"},\"nld\":{\"official\":\"Åland eilanden\",\"common\":\"Ålandeilanden\"},\"per\":{\"official\":\"????? ????\",\"common\":\"????? ????\"},\"pol\":{\"official\":\"Wyspy Alandzkie\",\"common\":\"Wyspy Alandzkie\"},\"por\":{\"official\":\"Ilhas Åland\",\"common\":\"Alândia\"},\"rus\":{\"official\":\"????????? ???????\",\"common\":\"????????? ???????\"},\"slk\":{\"official\":\"Alandské ostrovy\",\"common\":\"Alandy\"},\"spa\":{\"official\":\"Islas Åland\",\"common\":\"Alandia\"},\"swe\":{\"official\":\"Åland\",\"common\":\"Åland\"},\"urd\":{\"official\":\"????? ?????\",\"common\":\"????? ?????\"},\"zho\":{\"official\":\"????\",\"common\":\"????\"}},\"latlng\":[60.116667,19.9],\"landlocked\":false,\"area\":1580.0,\"demonyms\":{\"eng\":{\"f\":\"Ålandish\",\"m\":\"Ålandish\"},\"fra\":{\"f\":\"Ålandaise\",\"m\":\"Ålandais\"}},\"flag\":\"\\uD83C\\uDDE6\\uD83C\\uDDFD\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/ewFb3vYsfUmVCoSb8\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/1650407\"},\"population\":29458,\"car\":{\"signs\":[\"\"],\"side\":\"right\"},\"timezones\":[\"UTC+02:00\"],\"continents\":[\"Europe\"],\"flags\":[\"https://flagcdn.com/ax.svg\",\"https://flagcdn.com/w320/ax.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:51 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:46 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

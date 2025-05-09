@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Name-20230205202847847",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/name/Falkland%20Islands%20(Malvinas)?fields\u003d328706846",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:28:50 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:28:51 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\ncontent-type: application/json\ncontent-length: 72\nKeep-Alive: timeout\u003d5, max\u003d22\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"altSpellings\":[\"FK\",\"Islas Malvinas\",\"Falkland Islands (Malvinas)\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:28:51 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:28:47 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

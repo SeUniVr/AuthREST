@@ -1,0 +1,21 @@
+{
+  "openapi": "3.0.1",
+  "servers": [
+    {
+      "url": "https://postman-echo.com"
+    }
+  ],
+  "info": {
+    "title": "Conduit API",
+    "description": "Conduit API",
+    "contact": {
+      "name": "RealWorld",
+      "url": "https://postman-echo.com"
+    },
+    "license": {
+      "name": "MIT License",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "version": "1.0.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Translation-20230205202725808",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/translation/Norfolkeiland",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:28:16 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:28:16 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d96\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Norfolk Island\",\"official\":\"Territory of Norfolk Island\",\"nativeName\":{\"eng\":{\"official\":\"Territory of Norfolk Island\",\"common\":\"Norfolk Island\"},\"pih\":{\"official\":\"Teratri of Norf\u0027k Ailen\",\"common\":\"Norf\u0027k Ailen\"}}},\"tld\":[\".nf\"],\"cca2\":\"NF\",\"ccn3\":\"574\",\"cca3\":\"NFK\",\"independent\":false,\"status\":\"officially-assigned\",\"unMember\":false,\"currencies\":{\"AUD\":{\"name\":\"Australian dollar\",\"symbol\":\"$\"}},\"idd\":{\"root\":\"+6\",\"suffixes\":[\"72\"]},\"capital\":[\"Kingston\"],\"altSpellings\":[\"NF\",\"Territory of Norfolk Island\",\"Teratri of Norf\u0027k Ailen\"],\"region\":\"Oceania\",\"subregion\":\"Australia and New Zealand\",\"languages\":{\"eng\":\"English\",\"pih\":\"Norfuk\"},\"translations\":{\"ara\":{\"official\":\"????? ????? ???????\",\"common\":\"????? ???????\"},\"bre\":{\"official\":\"Tiriad Enez Norfolk\",\"common\":\"Enez Norfolk\"},\"ces\":{\"official\":\"Teritorium ostrova Norfolk\",\"common\":\"Norfolk\"},\"cym\":{\"official\":\"Territory of Norfolk Island\",\"common\":\"Norfolk Island\"},\"deu\":{\"official\":\"Gebiet der Norfolkinsel\",\"common\":\"Norfolkinsel\"},\"est\":{\"official\":\"Norfolki saare ala\",\"common\":\"Norfolk\"},\"fin\":{\"official\":\"Norfolkinsaaren territorio\",\"common\":\"Norfolkinsaari\"},\"fra\":{\"official\":\"Territoire de l\u0027île Norfolk\",\"common\":\"Île Norfolk\"},\"hrv\":{\"official\":\"Teritorij Norfolk Island\",\"common\":\"Otok Norfolk\"},\"hun\":{\"official\":\"Norfolk-sziget\",\"common\":\"Norfolk-sziget\"},\"ita\":{\"official\":\"Territorio di Norfolk Island\",\"common\":\"Isola Norfolk\"},\"jpn\":{\"official\":\"??????????\",\"common\":\"???????\"},\"kor\":{\"official\":\"?? ?\",\"common\":\"?? ?\"},\"nld\":{\"official\":\"Grondgebied van Norfolk Island\",\"common\":\"Norfolkeiland\"},\"per\":{\"official\":\"????? ????? ?????\",\"common\":\"????? ?????\"},\"pol\":{\"official\":\"Terytorium Wyspy Norfolk\",\"common\":\"Wyspa Norfolk\"},\"por\":{\"official\":\"Território da Ilha Norfolk\",\"common\":\"Ilha Norfolk\"},\"rus\":{\"official\":\"?????????? ??????? ???????\",\"common\":\"???????\"},\"slk\":{\"official\":\"Teritórium ostrova Norfolk\",\"common\":\"Norfolk\"},\"spa\":{\"official\":\"Territorio de la Isla Norfolk\",\"common\":\"Isla de Norfolk\"},\"swe\":{\"official\":\"Norfolkön\",\"common\":\"Norfolkön\"},\"urd\":{\"official\":\"????? ????? ???\",\"common\":\"????? ?????\"},\"zho\":{\"official\":\"????\",\"common\":\"????\"}},\"latlng\":[-29.03333333,167.95],\"landlocked\":false,\"area\":36.0,\"demonyms\":{\"eng\":{\"f\":\"Norfolk Islander\",\"m\":\"Norfolk Islander\"},\"fra\":{\"f\":\"Norfolkaise\",\"m\":\"Norfolkais\"}},\"flag\":\"\\uD83C\\uDDF3\\uD83C\\uDDEB\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/pbvtm6XYd1iZbjky5\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/2574988\"},\"population\":2302,\"car\":{\"signs\":[\"AUS\"],\"side\":\"left\"},\"timezones\":[\"UTC+11:30\"],\"continents\":[\"Oceania\"],\"flags\":[\"https://flagcdn.com/nf.svg\",\"https://flagcdn.com/w320/nf.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:28:16 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:27:25 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

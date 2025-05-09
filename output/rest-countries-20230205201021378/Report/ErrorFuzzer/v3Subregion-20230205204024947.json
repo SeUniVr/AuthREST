@@ -1,0 +1,30 @@
+{
+  "generator": "ErrorFuzzer",
+  "name": "v3Subregion-20230205204024947",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/subregion/Southern%20Europe?fields\u003dfalse",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:40:24 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:40:25 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\ncontent-type: application/json\ncontent-length: 784\nKeep-Alive: timeout\u003d5, max\u003d85\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"altSpellings\":[\"MT\",\"Republic of Malta\",\"Repubblika ta\u0027 Malta\"]},{\"altSpellings\":[\"GR\",\"Elláda\",\"Hellenic Republic\",\"???????? ??????????\"]},{\"altSpellings\":[\"SM\",\"Republic of San Marino\",\"Repubblica di San Marino\"]},{\"altSpellings\":[\"IT\",\"Italian Republic\",\"Repubblica italiana\"]},{\"altSpellings\":[\"GI\"]},{\"altSpellings\":[\"VA\",\"Holy See (Vatican City State)\",\"Vatican City State\",\"Stato della Città del Vaticano\"]},{\"altSpellings\":[\"CY\",\"Kýpros\",\"K?br?s\",\"Republic of Cyprus\",\"???????? ??????????\",\"K?br?s Cumhuriyeti\"]},{\"altSpellings\":[\"AD\",\"Principality of Andorra\",\"Principat d\u0027Andorra\"]},{\"altSpellings\":[\"ES\",\"Kingdom of Spain\",\"Reino de España\"]},{\"altSpellings\":[\"PT\",\"Portuguesa\",\"Portuguese Republic\",\"República Portuguesa\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:40:25 PM",
+      "tags": [
+        "mutated"
+      ]
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:40:24 PM",
+  "testResults": {
+    "ErrorStatusCodeOracle": {
+      "result": "FAIL",
+      "message": "The erroneous test sequence was accepted as valid by the server."
+    }
+  },
+  "tags": []
+}

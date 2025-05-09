@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Demonym-20230205201946237",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/demonym/Sahrawi",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:47 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:47 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d98\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Western Sahara\",\"official\":\"Sahrawi Arab Democratic Republic\",\"nativeName\":{\"ber\":{\"official\":\"Sahrawi Arab Democratic Republic\",\"common\":\"Western Sahara\"},\"mey\":{\"official\":\"????????? ??????? ????????? ???????????\",\"common\":\"??????? ???????\"},\"spa\":{\"official\":\"República Árabe Saharaui Democrática\",\"common\":\"Sahara Occidental\"}}},\"tld\":[\".eh\"],\"cca2\":\"EH\",\"ccn3\":\"732\",\"cca3\":\"ESH\",\"independent\":false,\"status\":\"officially-assigned\",\"unMember\":false,\"currencies\":{\"DZD\":{\"name\":\"Algerian dinar\",\"symbol\":\"??\"},\"MAD\":{\"name\":\"Moroccan dirham\",\"symbol\":\"DH\"},\"MRU\":{\"name\":\"Mauritanian ouguiya\",\"symbol\":\"UM\"}},\"idd\":{\"root\":\"+2\",\"suffixes\":[\"125288\",\"125289\"]},\"capital\":[\"El Aaiún\"],\"altSpellings\":[\"EH\",\"Tane?roft Tutrimt\"],\"region\":\"Africa\",\"subregion\":\"Northern Africa\",\"languages\":{\"ber\":\"Berber\",\"mey\":\"Hassaniya\",\"spa\":\"Spanish\"},\"translations\":{\"ara\":{\"official\":\"????????? ??????? ????????? ???????????\",\"common\":\"??????? ???????\"},\"bre\":{\"official\":\"Republik Arab Saharaoui Demokratel\",\"common\":\"Sahara ar C\u0027hornôg\"},\"ces\":{\"official\":\"Západní Sahara\",\"common\":\"Západní Sahara\"},\"cym\":{\"official\":\"Sahrawi Arab Democratic Republic\",\"common\":\"Western Sahara\"},\"deu\":{\"official\":\"Demokratische Arabische Republik Sahara\",\"common\":\"Westsahara\"},\"est\":{\"official\":\"Lääne-Sahara\",\"common\":\"Lääne-Sahara\"},\"fin\":{\"official\":\"Länsi-Sahara\",\"common\":\"Länsi-Sahara\"},\"fra\":{\"official\":\"République arabe sahraouie démocratique\",\"common\":\"Sahara Occidental\"},\"hrv\":{\"official\":\"Sahrawi Arab Demokratska Republika\",\"common\":\"Zapadna Sahara\"},\"hun\":{\"official\":\"Nyugat-Szahara\",\"common\":\"Nyugat-Szahara\"},\"ita\":{\"official\":\"Repubblica Araba Saharawi Democratica\",\"common\":\"Sahara Occidentale\"},\"jpn\":{\"official\":\"???????????\",\"common\":\"????\"},\"kor\":{\"official\":\"??? ?? ?? ???\",\"common\":\"????\"},\"nld\":{\"official\":\"Sahrawi Arabische Democratische Republiek\",\"common\":\"Westelijke Sahara\"},\"per\":{\"official\":\"????? ????\",\"common\":\"????? ????\"},\"pol\":{\"official\":\"Saharyjska Arabska Republika Demokratyczna\",\"common\":\"Sahara Zachodnia\"},\"por\":{\"official\":\"República Árabe Saharaui Democrática\",\"common\":\"Saara Ocidental\"},\"rus\":{\"official\":\"Sahrawi ???????? ??????????????? ??????????\",\"common\":\"???????? ??????\"},\"slk\":{\"official\":\"Západná Sahara\",\"common\":\"Západná Sahara\"},\"spa\":{\"official\":\"República Árabe Saharaui Democrática\",\"common\":\"Sahara Occidental\"},\"swe\":{\"official\":\"Västsahara\",\"common\":\"Västsahara\"},\"urd\":{\"official\":\"?????? ??? ????? ???????\",\"common\":\"????? ?????\"},\"zho\":{\"official\":\"???????????\",\"common\":\"????\"}},\"latlng\":[24.5,-13.0],\"landlocked\":false,\"borders\":[\"DZA\",\"MRT\",\"MAR\"],\"area\":266000.0,\"demonyms\":{\"eng\":{\"f\":\"Sahrawi\",\"m\":\"Sahrawi\"}},\"flag\":\"\\uD83C\\uDDEA\\uD83C\\uDDED\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/7nU3mB69vP6zQp7A8\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/5441968\"},\"population\":510713,\"car\":{\"signs\":[\"\"],\"side\":\"right\"},\"timezones\":[\"UTC+00:00\"],\"continents\":[\"Africa\"],\"flags\":[\"https://flagcdn.com/eh.svg\",\"https://flagcdn.com/w320/eh.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:47 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:46 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

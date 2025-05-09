@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Capital-20230205201958121",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/capital/Thimphu",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:20:02 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:20:02 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d82\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Bhutan\",\"official\":\"Kingdom of Bhutan\",\"nativeName\":{\"dzo\":{\"official\":\"??????????????\",\"common\":\"??????????\"}}},\"tld\":[\".bt\"],\"cca2\":\"BT\",\"ccn3\":\"064\",\"cca3\":\"BTN\",\"cioc\":\"BHU\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"BTN\":{\"name\":\"Bhutanese ngultrum\",\"symbol\":\"Nu.\"},\"INR\":{\"name\":\"Indian rupee\",\"symbol\":\"?\"}},\"idd\":{\"root\":\"+9\",\"suffixes\":[\"75\"]},\"capital\":[\"Thimphu\"],\"altSpellings\":[\"BT\",\"Kingdom of Bhutan\"],\"region\":\"Asia\",\"subregion\":\"Southern Asia\",\"languages\":{\"dzo\":\"Dzongkha\"},\"translations\":{\"ara\":{\"official\":\"????? ?????\",\"common\":\"?????\"},\"bre\":{\"official\":\"Rouantelezh Bhoutan\",\"common\":\"Bhoutan\"},\"ces\":{\"official\":\"Bhútánské království\",\"common\":\"Bhútán\"},\"cym\":{\"official\":\"Teyrnas Bhwtan\",\"common\":\"Bhwtan\"},\"deu\":{\"official\":\"Königreich Bhutan\",\"common\":\"Bhutan\"},\"est\":{\"official\":\"Bhutani Kuningriik\",\"common\":\"Bhutan\"},\"fin\":{\"official\":\"Bhutanin kuningaskunta\",\"common\":\"Bhutan\"},\"fra\":{\"official\":\"Royaume du Bhoutan\",\"common\":\"Bhoutan\"},\"hrv\":{\"official\":\"Kraljevina Butan\",\"common\":\"Butan\"},\"hun\":{\"official\":\"Bhutáni Királyság\",\"common\":\"Bhután\"},\"ita\":{\"official\":\"Regno del Bhutan\",\"common\":\"Bhutan\"},\"jpn\":{\"official\":\"??????\",\"common\":\"????\"},\"kor\":{\"official\":\"?? ??\",\"common\":\"??\"},\"nld\":{\"official\":\"Koninkrijk Bhutan\",\"common\":\"Bhutan\"},\"per\":{\"official\":\"??????? ?????\",\"common\":\"?????\"},\"pol\":{\"official\":\"Bhutan\",\"common\":\"Bhutan\"},\"por\":{\"official\":\"Reino do Butão\",\"common\":\"Butão\"},\"rus\":{\"official\":\"??????????? ?????\",\"common\":\"?????\"},\"slk\":{\"official\":\"Bhutánske krâ?ovstvo\",\"common\":\"Bhután\"},\"spa\":{\"official\":\"Reino de Bután\",\"common\":\"Bután\"},\"swe\":{\"official\":\"Konungariket Bhutan\",\"common\":\"Bhutan\"},\"urd\":{\"official\":\"????? ??????\",\"common\":\"??????\"},\"zho\":{\"official\":\"????\",\"common\":\"??\"}},\"latlng\":[27.5,90.5],\"landlocked\":true,\"borders\":[\"CHN\",\"IND\"],\"area\":38394.0,\"demonyms\":{\"eng\":{\"f\":\"Bhutanese\",\"m\":\"Bhutanese\"},\"fra\":{\"f\":\"Bhoutanaise\",\"m\":\"Bhoutanais\"}},\"flag\":\"\\uD83C\\uDDE7\\uD83C\\uDDF9\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/VEfXXBftTFLUpNgp8\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/184629\"},\"population\":771612,\"gini\":{\"2017\":37.4},\"fifa\":\"BHU\",\"car\":{\"signs\":[\"BHT\"],\"side\":\"left\"},\"timezones\":[\"UTC+06:00\"],\"continents\":[\"Asia\"],\"flags\":[\"https://flagcdn.com/bt.svg\",\"https://flagcdn.com/w320/bt.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:20:02 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:58 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

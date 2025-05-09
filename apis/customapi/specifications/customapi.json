@@ -1,0 +1,132 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Danish API",
+    "version": "1-0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost"
+    }
+  ],
+  "paths": {
+    "/xampp/login.php": {
+      "get": {
+        "summary": "User Login",
+        "x-crudOperationSemantics": "login",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful login"
+          },
+          "400": {
+            "description": "Incorrect name or password"
+          },
+          "429": {
+            "description": "Too many incorrect attempts"
+          }
+        }
+      }
+    },
+    "/xampp/loginWithToken.php": {
+      "get": {
+        "summary": "Check Login with Token",
+        "x-crudOperationSemantics": "login",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful login"
+          },
+          "400": {
+            "description": "Incorrect name or password"
+          },
+          "429": {
+            "description": "Too many incorrect attempts"
+          }
+        }
+      }
+    },
+    "/xampp/loginWithNoAuthentication.php": {
+      "get": {
+        "summary": "Check Login with Token",
+        "x-crudOperationSemantics": "login",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful login"
+          },
+          "400": {
+            "description": "Incorrect name or password"
+          }
+        }
+      }
+    }
+  }
+}

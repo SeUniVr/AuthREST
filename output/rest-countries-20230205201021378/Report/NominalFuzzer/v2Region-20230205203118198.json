@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Region-20230205203118198",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/Antarctic%20Ocean?fields\u003dHeilige%20Stoel",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:31:18 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 404
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:31:18 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 120\nKeep-Alive: timeout\u003d5, max\u003d80\nConnection: Keep-Alive\n",
+      "responseBody": "{\"message\":\"Page Not Found\",\"_links\":{\"self\":{\"href\":\"/v2/Antarctic%20Ocean?fields\u003dHeilige%20Stoel\",\"templated\":false}}}",
+      "responseReceivedAt": "Feb 5, 2023, 8:31:18 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:31:18 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "UNKNOWN",
+      "message": "The obtained status code is not informative enough to determine the outcome of the test sequence."
+    }
+  },
+  "tags": []
+}

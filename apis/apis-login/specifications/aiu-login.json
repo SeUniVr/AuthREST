@@ -1,0 +1,185 @@
+{
+  "openapi": "3.0.1",
+  "servers": [
+    {
+      "url": "http://212.50.233.129:81/prod-api"
+    }
+  ],
+  "info": {
+    "title": "aiu-login",
+    "version": "1.0",
+    "description": "this is aiu login tset",
+    "contact": {
+      "name": "deepbing",
+      "email": "non"
+    }
+  },
+  "tags": [
+    {
+      "description": "Management of the aiu project",
+      "name": "api-login"
+    }
+  ],
+  "paths": {
+    "/login": {
+      "post": {
+        "tags": [
+          "login"
+        ],
+        "operationId": "userLogin",
+        "parameters": [
+          {
+            "name": "username",
+            "description": "The username of the aiu user.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "description": "The password of the aiu user.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "description": "The googlecode of the user.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/commonReturn"
+                }
+              }
+            },
+            "description": "the user login success."
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "tags": [
+          "aiu user register"
+        ],
+        "operationId": "register",
+        "parameters": [
+          {
+            "name": "username",
+            "description": "the user name of user register",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "description": "the user password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "description": "the email of user",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "invitecode",
+            "description": "the invitecode of user",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "emailCode",
+            "description": "the code of email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ajaxResult"
+                }
+              }
+            },
+            "description": "The book has been successfully created. A copy of the created book is returned."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "commonReturn": {
+        "properties": {
+          "msg": {
+            "description": "The login user result message.",
+            "type": "string",
+            "example": "success"
+          },
+          "code": {
+            "description": "The code of the login status.",
+            "type": "string",
+            "example": "200"
+          },
+          "token": {
+            "description": "The token of login success.",
+            "type": "string",
+            "example": "eyJhbGciOiJIUzUxMiJ9"
+          }
+        },
+        "type": "object"
+      },
+      "ajaxResult": {
+        "properties": {
+          "msg": {
+            "description": "The login user result message.",
+            "type": "string",
+            "example": "success"
+          },
+          "code": {
+            "description": "The code of the login status.",
+            "type": "string",
+            "example": "200"
+          },
+          "data": {
+            "description": "The token of login success.",
+            "type": "string",
+            "example": "eyJhbGciOiJIUzUxMiJ9"
+          }
+        },
+        "type": "object"
+      }
+    }
+  }
+}

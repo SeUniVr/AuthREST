@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Demonym-20230205201946322",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/demonym/Motswana",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:50 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:50 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d94\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Botswana\",\"official\":\"Republic of Botswana\",\"nativeName\":{\"eng\":{\"official\":\"Republic of Botswana\",\"common\":\"Botswana\"},\"tsn\":{\"official\":\"Lefatshe la Botswana\",\"common\":\"Botswana\"}}},\"tld\":[\".bw\"],\"cca2\":\"BW\",\"ccn3\":\"072\",\"cca3\":\"BWA\",\"cioc\":\"BOT\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"BWP\":{\"name\":\"Botswana pula\",\"symbol\":\"P\"}},\"idd\":{\"root\":\"+2\",\"suffixes\":[\"67\"]},\"capital\":[\"Gaborone\"],\"altSpellings\":[\"BW\",\"Republic of Botswana\",\"Lefatshe la Botswana\"],\"region\":\"Africa\",\"subregion\":\"Southern Africa\",\"languages\":{\"eng\":\"English\",\"tsn\":\"Tswana\"},\"translations\":{\"ara\":{\"official\":\"??????? ????????\",\"common\":\"????????\"},\"bre\":{\"official\":\"Republik Botswana\",\"common\":\"Botswana\"},\"ces\":{\"official\":\"Botswanská republika\",\"common\":\"Botswana\"},\"cym\":{\"official\":\"Republic of Botswana\",\"common\":\"Botswana\"},\"deu\":{\"official\":\"Republik Botsuana\",\"common\":\"Botswana\"},\"est\":{\"official\":\"Botswana Vabariik\",\"common\":\"Botswana\"},\"fin\":{\"official\":\"Botswanan tasavalta\",\"common\":\"Botswana\"},\"fra\":{\"official\":\"République du Botswana\",\"common\":\"Botswana\"},\"hrv\":{\"official\":\"Republika Bocvana\",\"common\":\"Bocvana\"},\"hun\":{\"official\":\"Botswanai Köztársaság\",\"common\":\"Botswana\"},\"ita\":{\"official\":\"Repubblica del Botswana\",\"common\":\"Botswana\"},\"jpn\":{\"official\":\"???????\",\"common\":\"????\"},\"kor\":{\"official\":\"???? ???\",\"common\":\"????\"},\"nld\":{\"official\":\"Republiek Botswana\",\"common\":\"Botswana\"},\"per\":{\"official\":\"?????? ????????\",\"common\":\"????????\"},\"pol\":{\"official\":\"Republika Botswany\",\"common\":\"Botswana\"},\"por\":{\"official\":\"República do Botswana\",\"common\":\"Botswana\"},\"rus\":{\"official\":\"?????????? ????????\",\"common\":\"????????\"},\"slk\":{\"official\":\"Botswanská republika\",\"common\":\"Botswana\"},\"spa\":{\"official\":\"República de Botswana\",\"common\":\"Botswana\"},\"swe\":{\"official\":\"Republiken Botswana\",\"common\":\"Botswana\"},\"urd\":{\"official\":\"??????? ????????\",\"common\":\"????????\"},\"zho\":{\"official\":\"???????\",\"common\":\"????\"}},\"latlng\":[-22.0,24.0],\"landlocked\":true,\"borders\":[\"NAM\",\"ZAF\",\"ZMB\",\"ZWE\"],\"area\":582000.0,\"demonyms\":{\"eng\":{\"f\":\"Motswana\",\"m\":\"Motswana\"},\"fra\":{\"f\":\"Botswanaise\",\"m\":\"Botswanais\"}},\"flag\":\"\\uD83C\\uDDE7\\uD83C\\uDDFC\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/E364KeLy6N4JwxwQ8\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/1889339\"},\"population\":2351625,\"gini\":{\"2015\":53.3},\"fifa\":\"BOT\",\"car\":{\"signs\":[\"BW\"],\"side\":\"left\"},\"timezones\":[\"UTC+02:00\"],\"continents\":[\"Africa\"],\"flags\":[\"https://flagcdn.com/bw.svg\",\"https://flagcdn.com/w320/bw.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:50 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:46 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

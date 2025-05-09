@@ -1,0 +1,4 @@
+name: api-login
+specificationFileName: aiu-login.json
+authenticationCommands:
+  default: "python apis/apis-login/scripts/auth.py"

@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Alphacodes-20230205201952391",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/alpha?codes\u003dAello\u0026fields\u003dtrumeau",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:53 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 400
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:54 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 38\nConnection: close\n",
+      "responseBody": "{\"status\":400,\"message\":\"Bad Request\"}",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:54 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:52 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "UNKNOWN",
+      "message": "The obtained status code is not informative enough to determine the outcome of the test sequence."
+    }
+  },
+  "tags": []
+}

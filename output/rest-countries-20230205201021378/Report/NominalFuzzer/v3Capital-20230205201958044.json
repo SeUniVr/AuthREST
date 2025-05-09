@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Capital-20230205201958044",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/capital/Muscat",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:19:58 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 200
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:19:59 GMT\nServer: Apache/2.4.38 (Debian)\nCache-Control: public, immutable, max-age\u003d31556926\nContent-Type: application/json\nKeep-Alive: timeout\u003d5, max\u003d95\nConnection: Keep-Alive\n",
+      "responseBody": "[{\"name\":{\"common\":\"Oman\",\"official\":\"Sultanate of Oman\",\"nativeName\":{\"ara\":{\"official\":\"????? ????\",\"common\":\"????\"}}},\"tld\":[\".om\"],\"cca2\":\"OM\",\"ccn3\":\"512\",\"cca3\":\"OMN\",\"cioc\":\"OMA\",\"independent\":true,\"status\":\"officially-assigned\",\"unMember\":true,\"currencies\":{\"OMR\":{\"name\":\"Omani rial\",\"symbol\":\"?.?.\"}},\"idd\":{\"root\":\"+9\",\"suffixes\":[\"68\"]},\"capital\":[\"Muscat\"],\"altSpellings\":[\"OM\",\"Sultanate of Oman\",\"Sal?anat ?Um?n\"],\"region\":\"Asia\",\"subregion\":\"Western Asia\",\"languages\":{\"ara\":\"Arabic\"},\"translations\":{\"ara\":{\"official\":\"????? ????\",\"common\":\"????\"},\"bre\":{\"official\":\"Sultanelezh Oman\",\"common\":\"Oman\"},\"ces\":{\"official\":\"Sultanát Omán\",\"common\":\"Omán\"},\"cym\":{\"official\":\"Sultanate of Oman\",\"common\":\"Oman\"},\"deu\":{\"official\":\"Sultanat Oman\",\"common\":\"Oman\"},\"est\":{\"official\":\"Omaani Sultaniriik\",\"common\":\"Omaan\"},\"fin\":{\"official\":\"Omanin sulttaanikunta\",\"common\":\"Oman\"},\"fra\":{\"official\":\"Sultanat d\u0027Oman\",\"common\":\"Oman\"},\"hrv\":{\"official\":\"Sultanat Oman\",\"common\":\"Oman\"},\"hun\":{\"official\":\"Ománi Szultanátus\",\"common\":\"Omán\"},\"ita\":{\"official\":\"Sultanato dell\u0027Oman\",\"common\":\"oman\"},\"jpn\":{\"official\":\"????·?????\",\"common\":\"????\"},\"kor\":{\"official\":\"?? ???\",\"common\":\"??\"},\"nld\":{\"official\":\"Sultanaat van Oman\",\"common\":\"Oman\"},\"per\":{\"official\":\"?????????? ?????\",\"common\":\"????\"},\"pol\":{\"official\":\"Su?tanat Omanu\",\"common\":\"Oman\"},\"por\":{\"official\":\"Sultanato de Omã\",\"common\":\"Omã\"},\"rus\":{\"official\":\"???????? ????\",\"common\":\"????\"},\"slk\":{\"official\":\"Ománsky sultanát\",\"common\":\"Omán\"},\"spa\":{\"official\":\"Sultanato de Omán\",\"common\":\"Omán\"},\"swe\":{\"official\":\"Sultanatet Oman\",\"common\":\"Oman\"},\"urd\":{\"official\":\"????? ????\",\"common\":\"????\"},\"zho\":{\"official\":\"?????\",\"common\":\"??\"}},\"latlng\":[21.0,57.0],\"landlocked\":false,\"borders\":[\"SAU\",\"ARE\",\"YEM\"],\"area\":309500.0,\"demonyms\":{\"eng\":{\"f\":\"Omani\",\"m\":\"Omani\"},\"fra\":{\"f\":\"Omanaise\",\"m\":\"Omanais\"}},\"flag\":\"\\uD83C\\uDDF4\\uD83C\\uDDF2\",\"maps\":{\"googleMaps\":\"https://goo.gl/maps/L2BoXoAwDDwWecnw5\",\"openStreetMaps\":\"https://www.openstreetmap.org/relation/305138\"},\"population\":5106622,\"fifa\":\"OMA\",\"car\":{\"signs\":[\"OM\"],\"side\":\"right\"},\"timezones\":[\"UTC+04:00\"],\"continents\":[\"Asia\"],\"flags\":[\"https://flagcdn.com/om.svg\",\"https://flagcdn.com/w320/om.png\"]}]",
+      "responseReceivedAt": "Feb 5, 2023, 8:19:58 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:19:58 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "PASS",
+      "message": "The test sequence was executed successfully."
+    }
+  },
+  "tags": []
+}

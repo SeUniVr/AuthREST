@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v2Regionalbloc-20230205203258888",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v2/regionalbloc/Kenway",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:32:59 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 404
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:32:59 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 36\nKeep-Alive: timeout\u003d5, max\u003d59\nConnection: Keep-Alive\n",
+      "responseBody": "{\"status\":404,\"message\":\"Not Found\"}",
+      "responseReceivedAt": "Feb 5, 2023, 8:32:59 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:32:58 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "UNKNOWN",
+      "message": "The obtained status code is not informative enough to determine the outcome of the test sequence."
+    }
+  },
+  "tags": []
+}

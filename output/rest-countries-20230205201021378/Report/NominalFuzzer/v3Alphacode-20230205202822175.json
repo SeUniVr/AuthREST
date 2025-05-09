@@ -1,0 +1,28 @@
+{
+  "generator": "NominalFuzzer",
+  "name": "v3Alphacode-20230205202822175",
+  "testInteractions": [
+    {
+      "requestMethod": "GET",
+      "requestURL": "https://restcountries.com/v3/alpha/742114ca-39ae-4060-bd2a-ed46fc6f5d30?fields\u003d%D0%BC%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D1%81%D0%BA%D0%B8%20%D1%98%D0%B0%D0%B7%D0%B8%D0%BA",
+      "requestHeaders": "Accept: application/json\n",
+      "requestSentAt": "Feb 5, 2023, 8:28:27 PM",
+      "responseProtocol": "http/1.1",
+      "responseStatusCode": {
+        "code": 400
+      },
+      "responseHeaders": "Date: Sun, 05 Feb 2023 19:28:28 GMT\nServer: Apache/2.4.38 (Debian)\nContent-Type: application/json\ncontent-length: 38\nConnection: close\n",
+      "responseBody": "{\"status\":400,\"message\":\"Bad Request\"}",
+      "responseReceivedAt": "Feb 5, 2023, 8:28:27 PM",
+      "tags": []
+    }
+  ],
+  "generatedAt": "Feb 5, 2023, 8:28:22 PM",
+  "testResults": {
+    "StatusCodeOracle": {
+      "result": "UNKNOWN",
+      "message": "The obtained status code is not informative enough to determine the outcome of the test sequence."
+    }
+  },
+  "tags": []
+}
