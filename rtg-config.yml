@@ -1,2 +1,1 @@
-apiUnderTest: brainbi
-strategyClassName: StatusCodeAndErrorPatternTestingStrategy
+apiUnderTest: tracking

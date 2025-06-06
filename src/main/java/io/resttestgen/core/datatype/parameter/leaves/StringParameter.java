@@ -21,7 +21,7 @@ public class StringParameter extends LeafParameter {
 
     private Integer maxLength; // MUST be >= 0
     private Integer minLength = 0;
-    private String pattern; // TODO: add support for pattern
+    private String pattern; // TODO: complete support for pattern
 
     private static final Logger logger = LogManager.getLogger(StringParameter.class);
 
@@ -36,7 +36,7 @@ public class StringParameter extends LeafParameter {
         if (sourceMap.containsKey("maxLength")) {
             int maxLength = (int) ((double) sourceMap.get("maxLength"));
             if (maxLength < 0) {
-                logger.warn("Max length " + maxLength + " not valid for parameter '" + getName() + "'. The value will be ignored.");
+                logger.warn("Max length {} not valid for parameter '{}'. The value will be ignored.", maxLength, getName());
             } else {
                 this.maxLength = maxLength;
             }
@@ -45,7 +45,7 @@ public class StringParameter extends LeafParameter {
         if (sourceMap.containsKey("minLength")) {
             int minLength = (int) ((double) sourceMap.get("minLength"));
             if (minLength < 0 || (this.maxLength != null && minLength > this.maxLength)) {
-                logger.warn("Min length " + minLength + " not valid for parameter '" + getName() + "'. The value will be ignored.");
+                logger.warn("Min length {} not valid for parameter '{}'. The value will be ignored.", minLength, getName());
             } else {
                 this.minLength = minLength;
             }
@@ -75,7 +75,7 @@ public class StringParameter extends LeafParameter {
     public StringParameter(JsonPrimitive jsonPrimitive, String name) {
         super();
         this.type = ParameterType.STRING;
-        setValue(jsonPrimitive.getAsString());
+        setValueManually(jsonPrimitive.getAsString());
 
         this.name = new ParameterName(Objects.requireNonNullElse(name, ""));
     }
@@ -111,6 +111,14 @@ public class StringParameter extends LeafParameter {
         return maxLength;
     }
 
+    public String getPattern() {
+        return pattern;
+    }
+
+    public void setPattern(String pattern) {
+        this.pattern = pattern;
+    }
+
     public StringParameter merge(Parameter other) {
         if (!(other instanceof StringParameter)) {
             throw new IllegalArgumentException("Cannot merge a " + this.getClass() + " instance with a "
@@ -139,7 +147,7 @@ public class StringParameter extends LeafParameter {
             String stringValue = ObjectHelper.castToString(value);
 
             // Check if value is in enum set, if enum values are available
-            if (getEnumValues().size() == 0 || getEnumValues().contains(stringValue)) {
+            if (getEnumValues().isEmpty() || getEnumValues().contains(stringValue)) {
 
                 // Check if length is compliant with maxLength and minLength, if defined
                 if ((maxLength == null || stringValue.length() <= maxLength) && (minLength == null || stringValue.length() >= minLength)) {

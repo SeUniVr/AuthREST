@@ -40,7 +40,7 @@ public class BooleanParameter extends LeafParameter {
 
     public BooleanParameter(JsonPrimitive jsonPrimitive, String name) {
         super();
-        setValue(jsonPrimitive.getAsBoolean());
+        setValueManually(jsonPrimitive.getAsBoolean());
 
         this.name = new ParameterName(Objects.requireNonNullElse(name, ""));
     }
@@ -72,7 +72,7 @@ public class BooleanParameter extends LeafParameter {
         }
         try {
             boolean booleanValue = ObjectHelper.castToBoolean(value);
-            if (getEnumValues().size() == 0 || getEnumValues().contains(booleanValue)) {
+            if (getEnumValues().isEmpty() || getEnumValues().contains(booleanValue)) {
                 return true;
             }
         } catch (ClassCastException ignored) {}

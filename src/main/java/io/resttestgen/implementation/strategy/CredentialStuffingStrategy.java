@@ -59,15 +59,15 @@ public class CredentialStuffingStrategy extends Strategy {
                     TestSequence sequence = nominalFuzzer.generateTestSequences(1).get(0);
                     LeafParameter userIdParam = (LeafParameter) findUserIdParameter((List<LeafParameter>) sequence.get(0).getFuzzedOperation().getLeaves());
                     if (userIdParam != null && username != null) {
-                        userIdParam.setValue(username);
+                        userIdParam.setValueManually(username);
                     }
                     LeafParameter passwordParam = findPasswordParameter((List<LeafParameter>) sequence.get(0).getFuzzedOperation().getLeaves());
                     if (passwordParam != null && password != null) {
-                        passwordParam.setValue(password);
+                        passwordParam.setValueManually(password);
                     }
                     LeafParameter secretTokenParam = findSecretTokenParameter((List<LeafParameter>) sequence.get(0).getFuzzedOperation().getLeaves());
                     if (secretTokenParam != null && secretToken != null) {
-                        secretTokenParam.setValue(secretToken);
+                        secretTokenParam.setValueManually(secretToken);
                     }
 
                     attemptsSequence.append(sequence);

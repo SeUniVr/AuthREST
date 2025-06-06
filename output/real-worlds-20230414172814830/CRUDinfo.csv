@@ -1,2 +1,0 @@
-operation,realCrudSemantics,inferredCrudSemantics,realResourceType,inferredResourceType,realInputResourceIdentifier,inferredInputResourceIdentifier,realOutputResourceIdentifier,inferredOutputResourceIdentifier
-POST /login,UNKNOWN,CREATE,,Cluster0,,,,Usernam

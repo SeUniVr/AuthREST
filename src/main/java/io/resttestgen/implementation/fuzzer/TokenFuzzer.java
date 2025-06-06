@@ -1,12 +1,12 @@
 package io.resttestgen.implementation.fuzzer;
 
-import io.resttestgen.boot.AuthenticationInfo;
 import io.resttestgen.core.Environment;
 import io.resttestgen.core.datatype.parameter.leaves.LeafParameter;
 import io.resttestgen.core.testing.*;
-import io.resttestgen.implementation.mutator.ConstraintViolationMutator;
-import io.resttestgen.implementation.mutator.MissingRequiredMutator;
-import io.resttestgen.implementation.mutator.WrongTypeMutator;
+import io.resttestgen.core.testing.mutator.ParameterMutator;
+import io.resttestgen.implementation.mutator.parameter.ConstraintViolationParameterMutator;
+import io.resttestgen.implementation.mutator.parameter.MissingRequiredParameterMutator;
+import io.resttestgen.implementation.mutator.parameter.WrongTypeParameterMutator;
 import io.resttestgen.implementation.oracle.ErrorStatusCodeOracle;
 import io.resttestgen.implementation.writer.ReportWriter;
 import io.resttestgen.implementation.writer.RestAssuredWriter;
@@ -22,14 +22,14 @@ public class TokenFuzzer extends Fuzzer {
     private static final Logger logger = LogManager.getLogger(TokenFuzzer.class);
 
     private final TestSequence testSequenceToMutate;
-    private final Set<Mutator> mutators;
+    private final Set<ParameterMutator> mutators;
 
     public TokenFuzzer(TestSequence testSequenceToMutate) {
         this.testSequenceToMutate = testSequenceToMutate;
         mutators = new HashSet<>();
-        mutators.add(new MissingRequiredMutator());
-        mutators.add(new WrongTypeMutator());
-        mutators.add(new ConstraintViolationMutator());
+        mutators.add(new MissingRequiredParameterMutator());
+        mutators.add(new WrongTypeParameterMutator());
+        mutators.add(new ConstraintViolationParameterMutator());
     }
 
     public List<TestSequence> generateTestSequences(int numberOfSequences) {
@@ -57,7 +57,7 @@ public class TokenFuzzer extends Fuzzer {
                 currentTestSequence.appendGeneratedAtTimestampToSequenceName();
 
                 // Get set of applicable mutations to this operation
-                Set<Pair<LeafParameter, Mutator>> mutableParameters = new HashSet<>();
+                Set<Pair<LeafParameter, ParameterMutator>> mutableParameters = new HashSet<>();
                 mutableInteraction.getFuzzedOperation().getLeaves().forEach(leaf -> mutators.forEach(mutator -> {
                         if (mutator.isParameterMutable(leaf)) {
                             mutableParameters.add(new Pair<>(leaf, mutator));
@@ -65,15 +65,15 @@ public class TokenFuzzer extends Fuzzer {
                 }));
 
                 // Choose a random mutation pair
-                Optional<Pair<LeafParameter, Mutator>> mutable = Environment.getInstance().getRandom().nextElement(mutableParameters);
+                Optional<Pair<LeafParameter, ParameterMutator>> mutable = Environment.getInstance().getRandom().nextElement(mutableParameters);
                 mutable.ifPresent(parameterMutatorPair -> {
                     // Apply mutation
                     LeafParameter parameterToMutate = parameterMutatorPair.getFirst();
-                    Mutator mutator = parameterMutatorPair.getSecond();
-                    LeafParameter mutated = mutator.mutate(parameterToMutate);
+                    ParameterMutator mutator = parameterMutatorPair.getSecond();
+                    LeafParameter mutated = (LeafParameter) mutator.mutate(parameterToMutate);
                     mutated.addTag("mutated");
 
-                    // Replace original parameter with mutated one
+                    // Replace the original parameter with mutated one
                     if (mutable.get().getFirst().replace(mutated)) {
                         logger.debug("Mutation applied correctly.");
                     } else {

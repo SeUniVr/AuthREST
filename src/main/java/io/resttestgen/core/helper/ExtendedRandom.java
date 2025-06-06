@@ -229,7 +229,7 @@ public class ExtendedRandom extends Random {
     }
 
     public String nextGlobalDictionaryEntry(int length) {
-        Dictionary globalDictionary = Environment.getInstance().getGlobalDictionary();
+        Dictionary globalDictionary = Environment.getInstance().getGlobalResponseDictionary();
         Optional<DictionaryEntry> chosenEntry = nextElement(globalDictionary.getEntriesByValueLength(length));
         return chosenEntry.map(dictionaryEntry -> dictionaryEntry.getValue().toString()).orElse(null);
     }
@@ -445,7 +445,7 @@ public class ExtendedRandom extends Random {
     }
 
     public <E> Optional<E> nextElement(Collection<E> e) {
-        if (e.size() == 0) {
+        if (e.isEmpty()) {
             return Optional.empty();
         }
         return e.stream().skip(nextInt(e.size())).findFirst();

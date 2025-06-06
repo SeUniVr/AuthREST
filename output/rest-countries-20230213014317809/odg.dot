@@ -1,3 +1,0 @@
-digraph G {
-  1 [ label="GET /v2/all" ];
-}

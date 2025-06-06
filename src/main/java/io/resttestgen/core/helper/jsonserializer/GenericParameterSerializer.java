@@ -23,7 +23,12 @@ public class GenericParameterSerializer implements JsonSerializer<GenericParamet
                 .create();
 
         JsonObject result = new JsonObject();
-        result.add("GenericParameter", gson.toJsonTree("GenericParameter"));
+
+        // Add description, if defined
+        if (!src.getDescription().trim().isEmpty()) {
+            result.addProperty("description", src.getDescription());
+        }
+
         return result;
     }
 }

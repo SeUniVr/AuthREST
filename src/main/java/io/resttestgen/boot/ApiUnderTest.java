@@ -149,7 +149,7 @@ public class ApiUnderTest {
 
         File ymlSpec = new File(getPath() + "specifications/" + computedYmlSpecificationFileName);
         File yamlSpec = new File(getPath() + "specifications/" + computedYamlSpecificationFileName);
-        File finalSpec = null;
+        File finalSpec;
 
         // Check if YAML specification exists (with bot yaml and yml extensions)
         if (yamlSpec.exists()) {
@@ -162,8 +162,7 @@ public class ApiUnderTest {
         }
 
         // Convert YAML specification to JSON specification
-        logger.info("Could not find JSON OpenAPI specification for " + name + ". Converting YAML specification to " +
-                "JSON. The JSON specification will be stored in the API folder for future use.");
+        logger.info("Could not find JSON OpenAPI specification for {}. Converting YAML specification to JSON. The JSON specification will be stored in the API folder for future use.", name);
         FileWriter writer = new FileWriter(jsonSpec);
         gson.toJson((Map<String, Object>) yaml.load(new FileInputStream(finalSpec)), writer);
         writer.close();
@@ -206,8 +205,6 @@ public class ApiUnderTest {
     }
 
     public void setHost(String host) {
-        logger.warn("The host from API configuration is currently not supported. Please change the server in the " +
-                "OpenAPI specification to change the destination host.");
         this.host = host;
     }
 
@@ -232,7 +229,7 @@ public class ApiUnderTest {
         if (getAuthenticationInfo("default") != null) {
             return getAuthenticationInfo("default");
         }
-        if (authenticationInfoMap.size() == 0) {
+        if (authenticationInfoMap.isEmpty()) {
             return null;
         }
         Map.Entry<String, AuthenticationInfo> entry = authenticationInfoMap.entrySet().iterator().next();
@@ -306,7 +303,7 @@ public class ApiUnderTest {
                 ApiUnderTest api = ApiUnderTest.loadApiFromFile(apiDir);
                 apis.add(api);
             } catch (IOException e) {
-                logger.warn("Could not load API with wildcard: " + apiDir + ". " + e.getMessage());
+                logger.warn("Could not load API with wildcard: {}. {}", apiDir, e.getMessage());
             }
         }
 
@@ -326,7 +323,7 @@ public class ApiUnderTest {
                 ApiUnderTest api = ApiUnderTest.loadApiFromFile(apiDir);
                 apis.add(api);
             } catch (IOException e) {
-                logger.warn("Could not load API with wildcard: " + apiDir + ". " + e.getMessage());
+                logger.warn("Could not load API with wildcard: {}. {}", apiDir, e.getMessage());
             }
         }
 

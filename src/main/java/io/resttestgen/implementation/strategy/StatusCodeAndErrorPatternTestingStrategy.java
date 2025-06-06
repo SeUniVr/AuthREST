@@ -52,10 +52,10 @@ public class StatusCodeAndErrorPatternTestingStrategy extends Strategy {
                 Parameter userIdParam = findUserIdParameter((List<LeafParameter>) sequence.get(0).getFuzzedOperation().getLeaves());
                 LeafParameter secretTokenParam = findSecretTokenParameter((List<LeafParameter>) sequence.get(0).getFuzzedOperation().getLeaves());
                 if (userIdParam != null && userIdParam instanceof LeafParameter) {
-                    ((LeafParameter) userIdParam).setValue(STATIC_USERNAME);
+                    ((LeafParameter) userIdParam).setValueManually(STATIC_USERNAME);
                 }
                 if (secretTokenParam != null) {
-                    secretTokenParam.setValue("secretrandomtoken");
+                    secretTokenParam.setValueManually("secretrandomtoken");
                 }
                 attemptsSequence.append(sequence);
             }

@@ -9,7 +9,6 @@ import io.resttestgen.core.openapi.Operation;
 import io.resttestgen.core.testing.Strategy;
 import io.resttestgen.core.testing.TestRunner;
 import io.resttestgen.core.testing.TestSequence;
-import io.resttestgen.core.testing.operationsorter.OperationsSorter;
 import io.resttestgen.implementation.fuzzer.NominalFuzzer;
 import io.resttestgen.implementation.helper.RulesCombinationHelper;
 import io.resttestgen.implementation.operationssorter.GraphBasedOperationsSorter;
@@ -48,7 +47,7 @@ public class NlpStrategy extends Strategy {
 
         // Check if the rule generator is online
         if (!RuleExtractorProxy.isOnline()) {
-            logger.warn("Rule generator is not reachable. Make sure you ran it and it is reachable at the URL specified in the RuleGenerator class.");
+            logger.error("Rule Extractor is not reachable. Make sure you ran the Rule Extractor, and it is reachable at the URL specified in the RuleExtractorProxy class.");
             return;
         }
 
@@ -64,11 +63,12 @@ public class NlpStrategy extends Strategy {
         logger.info("NLP finished. Starting validation.");
 
         // Validate operations according to the order provided by the ODG-based strategy
-        OperationsSorter sorter = new GraphBasedOperationsSorter();
+        GraphBasedOperationsSorter sorter = new GraphBasedOperationsSorter();
+        sorter.setMaximumAttempts(2);
 
         while (!sorter.isEmpty()) {
 
-            logger.info("Operations remaining: " + sorter.getQueueSize());
+            logger.info("Operations remaining: {}", sorter.getQueueSize());
 
             Operation operation = sorter.getFirst();
 
@@ -86,7 +86,7 @@ public class NlpStrategy extends Strategy {
             List<Rule> combination = rulesCombinationHelper.getNextStaticallyValidCombination();
 
             // If there are no rules to validate, just execute the operation to possibly populate the API with test data
-            if (combination.size() == 0) {
+            if (combination.isEmpty()) {
                 runCoarseDynamicValidation(operation, new LinkedList<>());
             }
 
@@ -96,12 +96,12 @@ public class NlpStrategy extends Strategy {
                 // Continue validation till the operation time budget is over
                 while (Instant.now().getEpochSecond() - operationValidationStartTime < MAX_SECONDS_PER_OPERATION) {
 
-                    logger.info("Validating combination: " + combination);
+                    logger.info("Validating combination: {}", combination);
 
                     successfulSequence = runCoarseDynamicValidation(operation, combination);
 
                     // If an empty combination has been reached, stop and set an empty combination
-                    if (combination.size() == 0) {
+                    if (combination.isEmpty()) {
                         coarseValidatedRules.put(operation, new LinkedList<>());
                         break;
                     }
@@ -116,15 +116,15 @@ public class NlpStrategy extends Strategy {
                         runFineDynamicValidation(operation, successfulSequence, combination);
 
                         logger.info(operation);
-                        logger.info("From NLP:" + rulesFromNlp.get(operation));
-                        logger.info("Coarse validated: " + coarseValidatedRules.get(operation));
-                        logger.info("Fine validated: " + fineValidatedRules.get(operation));
+                        logger.info("From NLP:{}", rulesFromNlp.get(operation));
+                        logger.info("Coarse validated: {}", coarseValidatedRules.get(operation));
+                        logger.info("Fine validated: {}", fineValidatedRules.get(operation));
 
                         Set<Rule> discardedByCoarseValidation = Sets.difference(new HashSet<>(rulesFromNlp.get(operation)), new HashSet<>(coarseValidatedRules.get(operation)));
                         Set<Rule> discardedByFineValidation = Sets.difference(new HashSet<>(coarseValidatedRules.get(operation)), new HashSet<>(fineValidatedRules.get(operation)));
 
-                        logger.info("Discarded by coarse validation: " + discardedByCoarseValidation);
-                        logger.info("Discarded by fine validation: " + discardedByFineValidation);
+                        logger.info("Discarded by coarse validation: {}", discardedByCoarseValidation);
+                        logger.info("Discarded by fine validation: {}", discardedByFineValidation);
 
 
 
@@ -200,7 +200,7 @@ public class NlpStrategy extends Strategy {
         // Apply rules to specification and export it
         for (Operation operation : Environment.getInstance().getOpenAPI().getOperations()) {
             List<Rule> rulesToApply = fineValidatedRules.get(operation);
-            logger.info("Applying rules to operation " + operation + ": " + rulesToApply);
+            logger.info("Applying rules to operation {}: {}", operation, rulesToApply);
             operation.applyRules(rulesToApply);
         }
         try {

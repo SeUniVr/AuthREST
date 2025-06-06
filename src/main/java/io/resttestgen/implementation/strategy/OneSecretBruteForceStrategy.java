@@ -43,7 +43,7 @@ public class OneSecretBruteForceStrategy extends Strategy {
 
                 LeafParameter secretTokenParam = findSecretTokenParameter((List<LeafParameter>) sequence.get(0).getFuzzedOperation().getLeaves());
                 if (secretTokenParam != null) {
-                    secretTokenParam.setValue("secretrandomtoken");
+                    secretTokenParam.setValueManually("secretrandomtoken");
                 }
                 attemptsSequence.append(sequence);
             }

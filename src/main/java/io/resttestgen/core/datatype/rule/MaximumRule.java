@@ -3,7 +3,6 @@ package io.resttestgen.core.datatype.rule;
 import io.resttestgen.core.Environment;
 import io.resttestgen.core.datatype.ParameterName;
 import io.resttestgen.core.datatype.parameter.Parameter;
-import io.resttestgen.core.datatype.parameter.leaves.LeafParameter;
 import io.resttestgen.core.datatype.parameter.leaves.NumberParameter;
 import io.resttestgen.core.datatype.parameter.leaves.StringParameter;
 import io.resttestgen.core.datatype.parameter.structured.ArrayParameter;
@@ -11,10 +10,7 @@ import io.resttestgen.core.helper.DomainExplorer;
 import io.resttestgen.core.helper.ExtendedRandom;
 import io.resttestgen.core.openapi.Operation;
 import io.resttestgen.core.testing.TestSequence;
-import io.resttestgen.implementation.parametervalueprovider.multi.EnumAndExamplePriorityParameterValueProvider;
 import kotlin.Pair;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.LinkedList;
@@ -42,7 +38,7 @@ public class MaximumRule extends Rule {
     @Override
     public boolean isApplicable(Operation operation, List<Rule> combination) {
         List<Parameter> parameters = getParametersInOperation(operation);
-        return parameters.size() > 0 && parameters.stream()
+        return !parameters.isEmpty() && parameters.stream()
                 .allMatch(p -> p instanceof NumberParameter || p instanceof StringParameter || p instanceof ArrayParameter);
     }
 
@@ -64,7 +60,7 @@ public class MaximumRule extends Rule {
     @Override
     public boolean isApplied(Operation operation) {
         List<Parameter> parameters = getParametersInOperation(operation);
-        if (parameters.size() > 0) {
+        if (!parameters.isEmpty()) {
             Parameter parameter = parameters.get(0);
             return isAppliedToParameter(parameter);
         }
@@ -96,16 +92,16 @@ public class MaximumRule extends Rule {
         List<Parameter> parameters = getParametersInOperation(maxValueOperation);
 
         // At the moment, only number parameter are supported
-        if (parameters.size() > 0 && parameters.get(0) instanceof NumberParameter) {
+        if (!parameters.isEmpty() && parameters.get(0) instanceof NumberParameter) {
 
             NumberParameter parameter = (NumberParameter) parameters.get(0);
-            parameter.setValue(maximum - 1);
+            parameter.setValueManually(maximum - 1);
             fineValidationData.add(new Pair<>(maxValueTestSequence, true));
 
             TestSequence maxValuePlusOneTestSequence = maxValueTestSequence.deepClone();
             Operation maxValuePlusOneOperation = maxValuePlusOneTestSequence.getFirst().getFuzzedOperation();
             NumberParameter maxPlusOneParameter = (NumberParameter) getParametersInOperation(maxValuePlusOneOperation).get(0);
-            maxPlusOneParameter.setValue(maximum + 1);
+            maxPlusOneParameter.setValueManually(maximum + 1);
             fineValidationData.add(new Pair<>(maxValuePlusOneTestSequence, false));
         }
 
@@ -117,14 +113,14 @@ public class MaximumRule extends Rule {
         TestSequence clonedSequence = sequence.deepClone().reset();
         Operation operation = sequence.getFirst().getFuzzedOperation();
         List<Parameter> parameters = getParametersInOperation(operation);
-        if (parameters.size() == 0) {
+        if (parameters.isEmpty()) {
             return Set.of();
         }
 
         Parameter parameter = parameters.get(0);
         if (parameter instanceof NumberParameter) {
             NumberParameter asNumber = (NumberParameter) parameter;
-            asNumber.setValue(maximum + 1);
+            asNumber.setValueManually(maximum + 1);
             if (playSequence(clonedSequence).isPass()) {
                 Number inferredMaximum = DomainExplorer.getMaximumFromDomainExploration(asNumber, maximum, clonedSequence);
                 if (inferredMaximum == null) {
@@ -133,7 +129,7 @@ public class MaximumRule extends Rule {
                 return Set.of(new MaximumRule(parameter.getName(), inferredMaximum.doubleValue()));
             }
 
-            asNumber.setValue(maximum);
+            asNumber.setValueManually(maximum);
             if (playSequence(clonedSequence).isPass()) {
                 return Set.of(this);
             }
@@ -141,12 +137,12 @@ public class MaximumRule extends Rule {
             StringParameter asString = (StringParameter) parameter;
             ExtendedRandom random = Environment.getInstance().getRandom();
 
-            asString.setValue(random.nextString((int) maximum + 1));
+            asString.setValueManually(random.nextString((int) maximum + 1));
             if (playSequence(clonedSequence).isPass()) {
                 return Set.of();
             }
 
-            asString.setValue(random.nextString((int) maximum));
+            asString.setValueManually(random.nextString((int) maximum));
             if (playSequence(clonedSequence).isPass()) {
                 return Set.of(this);
             }

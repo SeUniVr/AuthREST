@@ -40,7 +40,7 @@ public class EnumRule extends Rule {
      */
     @Override
     public boolean isApplicable(Operation operation, List<Rule> combination) {
-        if (getParametersInOperation(operation).size() > 0) {
+        if (!getParametersInOperation(operation).isEmpty()) {
             Parameter parameter = getParametersInOperation(operation).get(0);
             if (parameter instanceof LeafParameter) {
                 return parameter.isObjectTypeCompliant(enumValue);
@@ -51,7 +51,7 @@ public class EnumRule extends Rule {
 
     @Override
     public void apply(Operation operation) {
-        if (getParametersInOperation(operation).size() > 0) {
+        if (!getParametersInOperation(operation).isEmpty()) {
 
             Parameter parameter = getParametersInOperation(operation).get(0);
 
@@ -68,7 +68,7 @@ public class EnumRule extends Rule {
 
     @Override
     public boolean isApplied(Operation operation) {
-        if (getParametersInOperation(operation).size() > 0) {
+        if (!getParametersInOperation(operation).isEmpty()) {
 
             Parameter parameter = getParametersInOperation(operation).get(0);
 
@@ -94,19 +94,19 @@ public class EnumRule extends Rule {
         fineValidationTestSequence.reset();
         Operation fineValidationOperation = fineValidationTestSequence.getFirst().getFuzzedOperation();
 
-        if (getParametersInOperation(fineValidationOperation).size() > 0) {
+        if (!getParametersInOperation(fineValidationOperation).isEmpty()) {
             Parameter parameter = getParametersInOperation(fineValidationOperation).get(0);
             if (parameter instanceof LeafParameter) {
                 try {
                     Object castedValue = ObjectHelper.castToParameterValueType(enumValue, parameter.getType());
-                    ((LeafParameter) parameter).setValue(castedValue);
+                    ((LeafParameter) parameter).setValueManually(castedValue);
                     fineValidationData.add(new Pair<>(fineValidationTestSequence, true));
                 } catch (ClassCastException ignored) {}
             } else if (ParameterUtils.isArrayOfLeaves(parameter)) {
                 try {
                     LeafParameter newElement = (LeafParameter) ((ArrayParameter) parameter).getReferenceElement();
                     Object castedValue = ObjectHelper.castToParameterValueType(enumValue, newElement.getType());
-                    newElement.setValue(castedValue);
+                    newElement.setValueManually(castedValue);
                     ((ArrayParameter) parameter).clearElements();
                     ((ArrayParameter) parameter).addElement(newElement);
                     fineValidationData.add(new Pair<>(fineValidationTestSequence, true));
@@ -125,18 +125,18 @@ public class EnumRule extends Rule {
         fineValidationTestSequence.reset();
         Operation fineValidationOperation = fineValidationTestSequence.getFirst().getFuzzedOperation();
 
-        if (getParametersInOperation(fineValidationOperation).size() > 0) {
+        if (!getParametersInOperation(fineValidationOperation).isEmpty()) {
             Parameter parameter = getParametersInOperation(fineValidationOperation).get(0);
             if (parameter instanceof LeafParameter) {
                 try {
                     Object castedValue = ObjectHelper.castToParameterValueType(enumValue, parameter.getType());
-                    ((LeafParameter) parameter).setValue(castedValue);
+                    ((LeafParameter) parameter).setValueManually(castedValue);
                 } catch (ClassCastException ignored) {}
             } else if (ParameterUtils.isArrayOfLeaves(parameter)) {
                 try {
                     LeafParameter newElement = (LeafParameter) ((ArrayParameter) parameter).getReferenceElement();
                     Object castedValue = ObjectHelper.castToParameterValueType(enumValue, newElement.getType());
-                    newElement.setValue(castedValue);
+                    newElement.setValueManually(castedValue);
                     ((ArrayParameter) parameter).clearElements();
                     ((ArrayParameter) parameter).addElement(newElement);
                 } catch (ClassCastException ignored) {}

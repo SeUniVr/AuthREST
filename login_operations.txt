@@ -1,1 +1,1 @@
-POST /auth/default/login
+POST /client/users/login

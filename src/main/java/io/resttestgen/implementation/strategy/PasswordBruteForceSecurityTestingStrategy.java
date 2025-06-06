@@ -17,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,8 +33,7 @@ public class PasswordBruteForceSecurityTestingStrategy extends Strategy {
         TestRunner runner = TestRunner.getInstance();
         runner.removeInvalidStatusCode(new HttpStatusCode(429));
 
-        List<Operation> operations = Environment.getInstance().getOpenAPI()
-                .getOperations().stream().collect(Collectors.toList());
+        List<Operation> operations = new ArrayList<>(Environment.getInstance().getOpenAPI().getOperations());
         List<Operation> loginOperations = filterLoginOperations(operations);
         if (loginOperations.isEmpty()) {
             System.out.println("No LOG_IN operations found in the OpenAPI documentation.");
@@ -48,10 +48,10 @@ public class PasswordBruteForceSecurityTestingStrategy extends Strategy {
                 Parameter userIdParam = findUserIdParameter((List<LeafParameter>) sequence.get(0).getFuzzedOperation().getLeaves());
                 LeafParameter secretTokenParam = findSecretTokenParameter((List<LeafParameter>) sequence.get(0).getFuzzedOperation().getLeaves());
                 if (userIdParam != null && userIdParam instanceof LeafParameter) {
-                    ((LeafParameter) userIdParam).setValue(STATIC_USERNAME);
+                    ((LeafParameter) userIdParam).setValueManually(STATIC_USERNAME);
                 }
                 if (secretTokenParam != null) {
-                    secretTokenParam.setValue("secretrandomtoken");
+                    secretTokenParam.setValueManually("secretrandomtoken");
                 }
                 attemptsSequence.append(sequence);
             }

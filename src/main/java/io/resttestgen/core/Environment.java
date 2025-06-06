@@ -5,7 +5,6 @@ import io.resttestgen.boot.Configuration;
 import io.resttestgen.core.datatype.NormalizedParameterName;
 import io.resttestgen.core.dictionary.Dictionary;
 import io.resttestgen.core.helper.ExtendedRandom;
-import io.resttestgen.core.openapi.CannotParseOpenApiException;
 import io.resttestgen.core.openapi.OpenApi;
 import io.resttestgen.core.openapi.OpenApiParser;
 import io.resttestgen.core.operationdependencygraph.OperationDependencyGraph;
@@ -28,7 +27,8 @@ public class Environment {
     private ApiUnderTest apiUnderTest;
     private OpenApi openAPI;
     private OperationDependencyGraph operationDependencyGraph;
-    private Dictionary globalDictionary;
+    private Dictionary globalResponseDictionary;
+    private Dictionary globalRequestDictionary;
     private ExtendedRandom random;
 
     private Environment() {}
@@ -39,16 +39,16 @@ public class Environment {
      * class instance provided as argument to the method.
      * @param configuration the configuration.
      * @param apiUnderTest the API under test.
-     * @throws CannotParseOpenApiException in case the provided specification is invalid.
      */
-    public Environment setUp(@NotNull Configuration configuration, @NotNull ApiUnderTest apiUnderTest) throws CannotParseOpenApiException {
+    public Environment setUp(@NotNull Configuration configuration, @NotNull ApiUnderTest apiUnderTest) {
         this.configuration = configuration;
         this.apiUnderTest = apiUnderTest;
         NormalizedParameterName.setQualifiableNames(configuration.getQualifiableParameterNames());
         this.apiUnderTest = apiUnderTest;
-        this.openAPI = new OpenApiParser(apiUnderTest).parse();
+        this.openAPI = OpenApiParser.parse(apiUnderTest);
         this.operationDependencyGraph = new OperationDependencyGraph(openAPI);
-        this.globalDictionary = new Dictionary();
+        this.globalResponseDictionary = new Dictionary();
+        this.globalRequestDictionary = new Dictionary();
         this.random = new ExtendedRandom();
 
         return this;
@@ -89,12 +89,12 @@ public class Environment {
         this.operationDependencyGraph = operationDependencyGraph;
     }
 
-    public Dictionary getGlobalDictionary() {
-        return globalDictionary;
+    public Dictionary getGlobalResponseDictionary() {
+        return globalResponseDictionary;
     }
 
-    public void setGlobalDictionary(Dictionary dictionary) {
-        this.globalDictionary = dictionary;
+    public Dictionary getGlobalRequestDictionary() {
+        return globalRequestDictionary;
     }
 
     public ExtendedRandom getRandom() {
@@ -113,8 +113,8 @@ public class Environment {
         apiUnderTest = null;
         openAPI = null;
         operationDependencyGraph = null;
-        globalDictionary = null;
+        globalResponseDictionary = null;
         random = null;
         return this;
     }
- }
+}

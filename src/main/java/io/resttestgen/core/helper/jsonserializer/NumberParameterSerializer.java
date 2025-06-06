@@ -1,6 +1,7 @@
 package io.resttestgen.core.helper.jsonserializer;
 
 import com.google.gson.*;
+import io.resttestgen.core.datatype.parameter.ParameterUtils;
 import io.resttestgen.core.datatype.parameter.attributes.ParameterLocation;
 import io.resttestgen.core.datatype.parameter.attributes.ParameterTypeFormat;
 import io.resttestgen.core.datatype.parameter.leaves.*;
@@ -28,7 +29,7 @@ public class NumberParameterSerializer implements JsonSerializer<NumberParameter
         if (src.getLocation() == ParameterLocation.REQUEST_BODY || src.getLocation() == ParameterLocation.RESPONSE_BODY) {
 
             // Add description, if defined
-            if (!src.getDescription().trim().equals("")) {
+            if (!src.getDescription().trim().isEmpty()) {
                 result.addProperty("description", src.getDescription());
             }
 
@@ -71,7 +72,7 @@ public class NumberParameterSerializer implements JsonSerializer<NumberParameter
             }
 
             // Add enum, if enum values are provided
-            if (src.getEnumValues().size() > 0) {
+            if (!src.getEnumValues().isEmpty()) {
                 result.add("enum", gson.toJsonTree(src.getEnumValues()));
             }
 
@@ -82,18 +83,32 @@ public class NumberParameterSerializer implements JsonSerializer<NumberParameter
             }
         } else {
 
-            // Add parameter name
-            result.addProperty("name", src.getName().toString());
+            // Add parameter name, if not a reference element
+            if (!ParameterUtils.isReferenceElement(src)) {
+                result.addProperty("name", src.getName().toString());
+
+                // Add required
+                if (src.isRequired() || src.getLocation() == ParameterLocation.PATH) {
+                    result.add("required", new JsonPrimitive(true));
+                }
+            }
 
             // Add description, if not empty
-            if (!src.getDescription().trim().equals("")) {
+            if (!src.getDescription().trim().isEmpty()) {
                 result.addProperty("description", src.getDescription());
             }
 
-            // Add location
-            result.addProperty("in", src.getLocation().toString().toLowerCase());
+            // Add location, only if root element
+            if (src.getParent() == null) {
+                result.addProperty("in", src.getLocation().toString().toLowerCase());
+            }
 
             JsonObject schema = new JsonObject();
+
+            // Type and constraints are places differently if parameter is a reference element
+            if (ParameterUtils.isReferenceElement(src)) {
+                schema = result;
+            }
 
             // Add type
             schema.addProperty("type", src.getType().toString().toLowerCase());
@@ -129,20 +144,19 @@ public class NumberParameterSerializer implements JsonSerializer<NumberParameter
             }
 
             // Add enum, if enum values are provided
-            if (src.getEnumValues().size() > 0) {
+            if (!src.getEnumValues().isEmpty()) {
                 schema.add("enum", gson.toJsonTree(src.getEnumValues()));
             }
 
             // Add examples, if examples are provided
             // FIXME: check if export format is correct
-            if (src.getExamples().size() > 0) {
+            if (!src.getExamples().isEmpty()) {
                 result.add("example", gson.toJsonTree(src.getExamples()));
             }
 
-            result.add("schema", schema);
-
-            if (src.isRequired() || src.getLocation() == ParameterLocation.PATH) {
-                result.add("required", new JsonPrimitive(true));
+            // Type and constraints are places differently if parameter is a reference element
+            if (!ParameterUtils.isReferenceElement(src)) {
+                result.add("schema", schema);
             }
         }
         return result;

@@ -10,7 +10,9 @@ import io.resttestgen.core.operationdependencygraph.DependencyEdge;
 import io.resttestgen.core.operationdependencygraph.OperationDependencyGraph;
 import io.resttestgen.core.operationdependencygraph.OperationNode;
 import io.resttestgen.core.testing.operationsorter.DynamicOperationsSorter;
-import io.resttestgen.implementation.parametervalueprovider.single.NormalizedDictionaryParameterValueProvider;
+import io.resttestgen.core.testing.parametervalueprovider.ParameterValueProviderCachedFactory;
+import io.resttestgen.implementation.parametervalueprovider.ParameterValueProviderType;
+import io.resttestgen.implementation.parametervalueprovider.single.ResponseDictionaryParameterValueProvider;
 
 import java.util.Comparator;
 import java.util.HashSet;
@@ -21,7 +23,7 @@ import java.util.stream.Collectors;
 @SuppressWarnings("unused")
 public class GraphBasedOperationsSorter extends DynamicOperationsSorter {
 
-    private int maximumAttempts = 5;
+    private int maximumAttempts = 10;
 
     private final OperationDependencyGraph graph = Environment.getInstance().getOperationDependencyGraph();
     private final ExtendedRandom random = Environment.getInstance().getRandom();
@@ -87,13 +89,14 @@ public class GraphBasedOperationsSorter extends DynamicOperationsSorter {
                 .collect(Collectors.toSet());
         Set<NormalizedParameterName> unsatisfiedParameters = Sets.difference(allParametersInOperation, satisfiedParameters);
 
-        NormalizedDictionaryParameterValueProvider provider = new NormalizedDictionaryParameterValueProvider();
+        ResponseDictionaryParameterValueProvider provider = (ResponseDictionaryParameterValueProvider) ParameterValueProviderCachedFactory.getParameterValueProvider(ParameterValueProviderType.RESPONSE_DICTIONARY);
+        provider.setSameNormalizedNameValueSourceClass();
 
         Set<NormalizedParameterName> parametersInDictionary = new HashSet<>();
         for (NormalizedParameterName unsatisfiedParameter : unsatisfiedParameters) {
             List<LeafParameter> foundParameters = node.getOperation().searchReferenceRequestParametersByNormalizedName(unsatisfiedParameter)
                     .stream().filter(p -> p instanceof LeafParameter).map(p -> (LeafParameter) p).collect(Collectors.toList());
-            if (foundParameters.size() > 0) {
+            if (!foundParameters.isEmpty()) {
                 LeafParameter parameter = foundParameters.get(0);
                 if (provider.countAvailableValuesFor(parameter) > 0) {
                     parametersInDictionary.add(unsatisfiedParameter);
