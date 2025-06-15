@@ -16,8 +16,14 @@ import java.io.IOException;
 public class App {
 
     private static final Logger logger = LogManager.getLogger(App.class);
+    private static final String asciiArt = "  ___        _   _    ______ _____ _____ _____ \n" +
+            " / _ \\      | | | |   | ___ \\  ___/  ___|_   _|\n" +
+            "/ /_\\ \\_   _| |_| |__ | |_/ / |__ \\ `--.  | |  \n" +
+            "|  _  | | | | __| '_ \\|    /|  __| `--. \\ | |  \n" +
+            "| | | | |_| | |_| | | | |\\ \\| |___/\\__/ / | |  \n" +
+            "\\_| |_/\\__,_|\\__|_| |_\\_| \\_\\____/\\____/  \\_/  \n";
     private static final String toolVersion = "25.06";
-    private static final String messageHeader = "RestTestGen CLI " + toolVersion;
+    private static final String messageHeader = "Built with RestTestGen " + toolVersion;
     private static final String helpMessage = messageHeader + "\n"
             + "Arguments:\n"
             + "   (OPTIONAL)  -a  API under test. Default: Book Store.\n"
@@ -36,7 +42,7 @@ public class App {
 
         // Set logger verbosity to INFO and welcome user
         Configurator.setRootLevel(Level.INFO);
-        logger.info(messageHeader + " started.");
+        System.out.println(asciiArt + messageHeader + ".");
 
         // Configuration: the constructor loads the configuration from file, if available, or uses default
         Configuration configuration;
