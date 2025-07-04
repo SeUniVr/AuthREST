@@ -1,1 +1,2 @@
-apiUnderTest: tracking
+apiUnderTest: id4i
+strategyClassName: PasswordBruteForceSecurityTestingStrategy

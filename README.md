@@ -131,3 +131,26 @@ Test results are located in the `results/` subdirectory of the API directory. Th
 The `api/` folder already contains the OpenAPI specifications of the API involved in the experiment.
 
 Please configure AuthREST to target these APIs with the proper security testing strategies.
+
+### Available strategies
+
+- `CredentialStuffingSecurityTestingStrategy` for credential stuffing.
+- `PasswordBruteForceSecurityTestingStrategy` for password brute forcing.
+- `UncheckedTokenAuthenticityTestingStrategy` for unchecked token authenticity (requires the configuration script to be working for the API).
+
+### Available APIs
+- `here`
+- `id4i`
+- `sixdot` 
+- `beezup`
+- `brainbi` 
+- `tradematic`
+
+### Example configuration
+
+As an example, to test the ID4I API for vulnerabilities to password brute forcing, this should be the content of the `rtg-config.yml` file:
+
+```yaml
+apiUnderTest: id4i
+strategyClassName: PasswordBruteForceSecurityTestingStrategy
+```

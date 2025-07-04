@@ -24,7 +24,7 @@ public class CredentialStuffingSecurityTestingStrategy extends Strategy {
 
     private static final Logger logger = LogManager.getLogger(CredentialStuffingSecurityTestingStrategy.class);
 
-    private static final int MAX_LOGIN_ATTEMPTS = 5;
+    private static final int MAX_LOGIN_ATTEMPTS = 100;
 
     public void start() {
 
