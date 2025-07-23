@@ -27,8 +27,6 @@ The API directory can contain an API configuration file (`api-config.yml`) in wh
 - `specificationFileName`: the name of the specification file located in the `specifications/` subdirectory. (Default: `openapi.json`).
 - `host`: the address or name of the host at which the API is reachable. Overrides the server address specified in the OpenAPI specification of the API.
 - `authenticationCommands`: a map `<label, command>` listing authentication commands that when called will return authentication information to AuthREST. See [Authentication](#auth) section for further details. (None by default).
-- ~~`resetCommand`: a command that when called will reset the state of the API. (None by default).~~ (Planned for next release).
-- ~~`resetBeforeTesting`: if set to `true`, AuthREST will call the reset script before launching the testing strategy. (Default: `false`).~~ (Planned for next release).
 
 You only need to specify the settings that you wish to override from their default values.
 

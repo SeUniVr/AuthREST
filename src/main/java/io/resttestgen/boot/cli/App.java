@@ -59,12 +59,12 @@ public class App {
         // Start RestTestGen using the starter class
         try {
             Starter.start(configuration);
-            logger.info("RestTestGen execution completed successfully.");
+            logger.info("AuthREST execution completed successfully.");
         } catch (InvalidOpenApiException e) {
             logger.error("The provided OpenAPI specification is not valid. {}", e.getMessage());
             System.exit(-1);
         } catch (Exception e) {
-            logger.error("An error occurred during the execution of RestTestGen. Please report it on GitHub.");
+            logger.error("An error occurred during the execution of AuthREST. Please report it on GitHub.");
             e.printStackTrace();
             System.exit(-1);
         }
